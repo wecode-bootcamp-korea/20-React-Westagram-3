@@ -1,5 +1,5 @@
-import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import LoginSeyongyun from './Pages/seyongyunLogin/Login';
 import MainSeyongyun from './Pages/seyongyunMain/Main';
 import LoginGramsong from './Pages/gramsongLogin/Login';
@@ -16,7 +16,7 @@ class Routes extends React.Component {
     return (
       <Router>
         <Switch>
-          <Route exact path="/" component={LoginSuyeonkim} />
+          <Route exact path="/Login-suyeonkim" component={LoginSuyeonkim} />
           <Route exact path="/Main-suyeonkim" component={MainSuyeonkim} />
           <Route exact path="/Login-seyongyun" component={LoginSeyongyun} />
           <Route exact path="/Main-seyongyun" component={MainSeyongyun} />
