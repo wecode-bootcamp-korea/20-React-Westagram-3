@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
-import './FeedOptions.scss';
+// import './FeedOptions.scss';
 
 // let [likes, addLikes] = useState(0)
 

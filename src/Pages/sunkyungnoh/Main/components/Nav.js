@@ -2,8 +2,8 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { search } from '@fortawesome/free-solid-svg-icons';
-import './Nav.scss';
+
+// import './Nav.scss';
 
 library.add();
 
@@ -50,7 +50,7 @@ class Nav extends React.Component {
           <button>
             <i aria-label="활동피드" className="far fa-heart"></i>
           </button>
-          <a href="">
+          <a href="https://www.instagram.com/">
             <img
               alt="userProfile"
               src="https://raw.githubusercontent.com/celline1637/1/main/%ED%88%AC%EB%AA%85%EA%B3%B0.png"

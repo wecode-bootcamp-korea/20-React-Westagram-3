@@ -3,7 +3,6 @@ import Header from './Header';
 import FeedOptions from './FeedOptions';
 import PhotoInfo from './PhotoInfo';
 import Comments from './Comments';
-import './Article.scss';
 
 class Article extends React.Component {
   render() {

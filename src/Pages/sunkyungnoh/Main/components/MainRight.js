@@ -3,7 +3,7 @@ import UserProfileBox from './UserProfileBox';
 import RecommendTitle from './RecommendTitle';
 import Recommendation from './Recommendation.js';
 import Footer from './Footer';
-import './MainRight.scss';
+// import './MainRight.scss';
 
 class MainRight extends React.Component {
   render() {

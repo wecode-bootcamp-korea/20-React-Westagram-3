@@ -1,27 +1,27 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
-
-import './Login.scss';
 import LoginSection from './components/LoginSection.js';
 import CreateAccount from './components/CreateAccount.js';
+import Appstore from './components/Appstore.js';
+import Footer from './components/Footer.js';
+import './Login.scss';
 
-class Login extends React.Component {
+class LoginSunkyungnoh extends React.Component {
   goToMain = () => {
-    this.props.history.push('/main');
+    this.props.history.push('/Main-sunkyungnoh');
   };
 
   render() {
     return (
       <div className="login">
-        <article>
+        <main>
           <LoginSection />
           <CreateAccount />
-          <Link to="/main">메인으로 이동</Link>
-          <button onClick={this.goToMain}>메인으로 이동</button>
-        </article>
+          <Appstore />
+        </main>
+        <Footer />
       </div>
     );
   }
 }
 
-export default withRouter(Login);
+export default LoginSunkyungnoh;
