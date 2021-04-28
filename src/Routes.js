@@ -1,15 +1,15 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import LoginSeyongyun from './Pages/seyongyunLogin/Login';
-import MainSeyongyun from './Pages/seyongyunMain/Main';
-import LoginGramsong from './Pages/gramsongLogin/Login';
-import MainGramsong from './Pages/gramsongMain/Main';
-import LoginSunkyungnoh from './Pages/sunkyungnohLogin/Login';
-import MainSunkyungnoh from './Pages/sunkyungnohMain/Main';
-import LoginSuyeonkim from './Pages/suyeonkimLogin/Login';
-import MainSuyeonkim from './Pages/suyeonkimMain/Main';
-import LoginWonkeunchoi from './Pages/wonkeunchoiLogin/Login';
-import MainWonkeunchoi from './Pages/wonkeunchoiMain/Main';
+import LoginSeyongyun from './Pages/seyongyun/Login/Login';
+import MainSeyongyun from './Pages/seyongyun/Main/Main';
+import LoginGaramsong from './Pages/garamsong/Login/Login';
+import MainGaramsong from './Pages/garamsong/Main/Main';
+import LoginSunkyungnoh from './Pages/sunkyungnoh/Login/Login';
+import MainSunkyungnoh from './Pages/sunkyungnoh/Main/Main';
+import LoginSuyeonkim from './Pages/suyeonkim/Login/Login';
+import MainSuyeonkim from './Pages/suyeonkim/Main/Main';
+import LoginWonkeunchoi from './Pages/wonkeunchoi/Login/Login';
+import MainWonkeunchoi from './Pages/wonkeunchoi/Main/Main';
 
 class Routes extends React.Component {
   render() {
@@ -20,8 +20,8 @@ class Routes extends React.Component {
           <Route exact path="/Main-suyeonkim" component={MainSuyeonkim} />
           <Route exact path="/Login-seyongyun" component={LoginSeyongyun} />
           <Route exact path="/Main-seyongyun" component={MainSeyongyun} />
-          <Route exact path="/Login-gramsong" component={LoginGramsong} />
-          <Route exact path="/Main-gramsong" component={MainGramsong} />
+          <Route exact path="/Login-garamsong" component={LoginGaramsong} />
+          <Route exact path="/Main-garamsong" component={MainGaramsong} />
           <Route exact path="/Login-sunkyungnoh" component={LoginSunkyungnoh} />
           <Route exact path="/Main-sunkyungnoh" component={MainSunkyungnoh} />
           <Route exact path="/Login-wonkeunchoi" component={LoginWonkeunchoi} />
