@@ -1,10 +1,5 @@
 import React from 'react';
-// import './LoginForm.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { fab } from '@fortawesome/free-brands-svg-icons';
-
-library.add(fab);
+import './LoginForm.scss';
 
 class LoginForm extends React.Component {
   render() {
@@ -51,9 +46,9 @@ class LoginForm extends React.Component {
           target="_blank"
           rel="noreferrer"
         >
-          <FontAwesomeIcon
-            icon={['fab', 'facebook']}
-            color="rgb(56, 81, 133)"
+          <img
+            alt="facebook logo"
+            src="/public/images/sunkyungnoh/facebook.png"
           />
           <span>Facebook으로 로그인</span>
         </a>

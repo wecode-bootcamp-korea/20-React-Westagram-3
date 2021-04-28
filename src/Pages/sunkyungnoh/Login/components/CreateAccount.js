@@ -1,5 +1,5 @@
 import React from 'react';
-// import './CreateAccount.scss';
+import './CreateAccount.scss';
 
 class CreateAccount extends React.Component {
   render() {
