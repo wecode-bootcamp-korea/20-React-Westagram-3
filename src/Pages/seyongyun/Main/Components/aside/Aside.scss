@@ -1,0 +1,45 @@
+.aside {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 150px;
+
+  .profileThumnailRight {
+    width: 25%;
+  }
+
+  .rightProfileId {
+    font-size: 10px;
+  }
+
+  .rightProfileIdFont {
+    margin: 2px;
+  }
+
+  .rightStoryArea {
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid rgb(199, 199, 199);
+  }
+
+  .rightStoryFont {
+    font-size: 10px;
+  }
+
+  ol {
+    list-style: none;
+    padding: 3px;
+  }
+
+  .rightStoryEachAccount {
+    display: flex;
+    flex-flow: row;
+    margin: 4px;
+    font-size: 8px;
+  }
+
+  .rightStoryProfileThumnail {
+    width: 23%;
+    margin: 0px 5px;
+  }
+}
