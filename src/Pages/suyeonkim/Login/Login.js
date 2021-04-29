@@ -5,15 +5,19 @@ import '../styles/styles.scss';
 import './Login.scss';
 
 class Login extends React.Component {
+  handleCreate = data => {
+    console.log(data);
+  };
+
   render() {
     return (
-      <body className="login">
+      <div className="login">
         <div>
           <h1>Westagram</h1>
-          <LoginForm />
+          <LoginForm onCreate={this.handleCreate} />
           <ForgotPassword />
         </div>
-      </body>
+      </div>
     );
   }
 }
