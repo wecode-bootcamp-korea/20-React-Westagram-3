@@ -1,0 +1,6 @@
+@import '../styles/common.scss';
+
+.main-page {
+  @include flexBox(center, flex-start, row);
+  margin: 100px 10%;
+}

@@ -1,0 +1,38 @@
+.profile__btn {
+  position: relative;
+  cursor: pointer;
+}
+
+.profile__nav {
+  position: absolute;
+  padding: 15px 0;
+  top: 50px;
+  right: 20px;
+  border-radius: 8px;
+  box-shadow: -10px 0px 13px -7px var(--dark-gray),
+    10px 0px 13px -7px var(--dark-gray), 5px 5px 15px 5px rgba(153, 153, 153, 0);
+  background-color: white;
+  z-index: 999;
+}
+
+.profile__nav__showHide {
+  display: none;
+}
+
+.profile__nav__list {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  margin-left: 25px;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.profile__nav__list i {
+  margin-right: 10px;
+}
+
+.logOut__btn {
+  padding: 25px 0 10px 25px;
+  border-top: 1px solid var(--border-line);
+}

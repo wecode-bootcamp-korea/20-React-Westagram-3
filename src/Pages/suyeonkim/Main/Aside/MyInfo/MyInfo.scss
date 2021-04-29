@@ -1,0 +1,16 @@
+@import '../../../styles/common.scss';
+
+.aside__myInfo {
+  @include flexBox(flex-start, center, row);
+}
+
+.aside__myInfo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.aside__myRealname {
+  color: var(--dark-gray);
+}
