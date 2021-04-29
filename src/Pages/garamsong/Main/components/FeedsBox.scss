@@ -1,0 +1,148 @@
+.FeedsBox {
+  margin-top: 10px;
+
+  .feed {
+    padding: 10px;
+
+    .feedInfo {
+      display: flex;
+      justify-content: space-between;
+
+      .feedProfilePhoto {
+        display: flex;
+        justify-content: flex-start;
+        padding: 3px;
+
+        img {
+          width: 45px;
+        }
+      }
+
+      .feedInfoRight {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        padding: 5px;
+
+        .feedInfoText {
+          font-size: 0.7rem;
+          color: #222;
+
+          .feedUserName {
+            margin-bottom: 5px;
+            font-weight: bold;
+          }
+
+          .feedLocation {
+            font-weight: lighter;
+            font-size: 0.6rem;
+          }
+        }
+
+        .moreInfo {
+          color: rgba(50, 50, 50, 1);
+          font-size: 1.3rem;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .feedPhoto {
+      width: 100%;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .replyIcons {
+      display: flex;
+      justify-content: space-between;
+      padding: 5px;
+      font-size: 1.2rem;
+    }
+
+    .replyCountLike {
+      display: flex;
+      align-items: center;
+      font-size: 0.7rem;
+
+      img {
+        margin-right: 3px;
+      }
+    }
+
+    .feedDescription {
+      display: flex;
+      margin: 3px auto;
+      font-size: 0.7rem;
+
+      h4 {
+        margin-right: 5px;
+        font-weight: bold;
+      }
+    }
+
+    .seeAllReply {
+      margin: 3px auto;
+      font-size: 0.7rem;
+    }
+
+    .replyValue {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      position: relative;
+      width: 100%;
+      margin-bottom: 3px;
+
+      .userId {
+        margin-right: 10px;
+        font-weight: bold;
+      }
+
+      .like {
+        position: absolute;
+        right: 10px;
+        background: none;
+        border: none;
+        font-size: 0.6rem;
+      }
+    }
+
+    .date {
+      color: rgba(50, 50, 50, 0.5);
+    }
+
+    .replyBar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 5px 0;
+      padding: 5px;
+      border-top: 1px solid #000;
+
+      .emoji {
+        font-size: 2rem;
+      }
+
+      .typeBar {
+        width: 80%;
+        height: 30px;
+        background-color: transparent;
+        border: none;
+        resize: none;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .post {
+        width: 15%;
+        background: transparent;
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.nav {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 55px;
+  background-color: #fff;
+  border-bottom: 1px solid rgba(150, 150, 150, 0.2);
+  font-size: 0.7rem;
+
+  .navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+
+    .logoContainer {
+      width: 13%;
+
+      .logoImg {
+        width: 100%;
+      }
+    }
+
+    .iconContainer {
+      display: flex;
+      justify-content: space-between;
+      width: 15%;
+      height: 50%;
+
+      .navIcon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30%;
+      }
+
+      .navIconImg {
+        width: 80%;
+        height: 80%;
+      }
+    }
+  }
+}
