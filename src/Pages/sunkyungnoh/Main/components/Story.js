@@ -1,5 +1,5 @@
 import React from 'react';
-// import './Story.scss';
+import './Story.scss';
 
 class Story extends React.Component {
   render() {

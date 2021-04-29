@@ -1,11 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { library } from '@fortawesome/fontawesome-svg-core';
-
-// import './Nav.scss';
-
-library.add();
+import './Nav.scss';
 
 class Nav extends React.Component {
   goToLogin = () => {
@@ -23,29 +18,26 @@ class Nav extends React.Component {
         <div className="searchBar">
           <input type="text" name="search" id="search" placeholder="검색" />
           <label className="search" htmlFor="search">
-            <FontAwesomeIcon icon={['fas', 'search']} />
+            <img alt="search icon" src="/images/sunkyungnoh/dm.png" />
           </label>
         </div>
         <div className="linksOfMenu">
           <a href="main.html" target="_blank">
-            <i aria-label="go homepage" className="fas fa-home"></i>
+            <img aria-label="홈" src="/images/sunkyungnoh/home.png" />
           </a>
           <a
             href="https://www.instagram.com/direct/inbox/"
             target="_blank"
             rel="noreferrer"
           >
-            <i
-              aria-label="send the direct message"
-              className="far fa-paper-plane"
-            ></i>
+            <img aria-label="direct" src="/images/sunkyungnoh/dm.png" />
           </a>
           <a
             href="https://www.instagram.com/explore/"
             target="_blank"
             rel="noreferrer"
           >
-            <i aria-label="사람 찾기" className="far fa-compass"></i>
+            <img aria-label="좋아요" src="/images/sunkyungnoh/heart.png" />
           </a>
           <button>
             <i aria-label="활동피드" className="far fa-heart"></i>

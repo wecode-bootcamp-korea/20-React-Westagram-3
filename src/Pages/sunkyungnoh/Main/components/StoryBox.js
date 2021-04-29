@@ -1,6 +1,6 @@
 import React from 'react';
 import Story from './Story';
-// import './StoryBox.scss';
+import './StoryBox.scss';
 
 class StoryBox extends React.Component {
   render() {

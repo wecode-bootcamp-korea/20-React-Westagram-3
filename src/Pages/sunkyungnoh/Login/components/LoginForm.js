@@ -46,10 +46,7 @@ class LoginForm extends React.Component {
           target="_blank"
           rel="noreferrer"
         >
-          <img
-            alt="facebook logo"
-            src="/public/images/sunkyungnoh/facebook.png"
-          />
+          <img alt="facebook logo" src="/images/sunkyungnoh/facebook.png" />
           <span>Facebook으로 로그인</span>
         </a>
       </form>

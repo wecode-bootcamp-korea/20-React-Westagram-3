@@ -1,7 +1,5 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart } from '@fortawesome/free-solid-svg-icons';
-// import './FeedOptions.scss';
+import './FeedOptions.scss';
 
 // let [likes, addLikes] = useState(0)
 
@@ -35,21 +33,25 @@ import { faHeart } from '@fortawesome/free-solid-svg-icons';
 class FeedOptions extends React.Component {
   render() {
     return (
-      <section className="feedOptions">
-        <button>
-          <FontAwesomeIcon icon={faHeart} />
-        </button>
-        <button>
-          <FontAwesomeIcon icon={faHeart} />
-        </button>
-        <button>
-          <FontAwesomeIcon icon={faHeart} />
-        </button>
-
-        <button>
-          <FontAwesomeIcon icon={faHeart} />
-        </button>
-      </section>
+      <>
+        <section className="feedOptions">
+          <button>
+            <img aria-label="좋아요" src="/images/sunkyungnoh/heart.png" />
+          </button>
+          <button>
+            <img aria-label="direct" src="/images/sunkyungnoh/dm.png" />
+          </button>
+          <button>
+            <img
+              aria-label="저장"
+              src="/images/sunkyungnoh/save_the_post.png"
+            />
+          </button>
+        </section>
+        <p className="numOfLikes">
+          좋아요 &nbsp;<span>123</span>개
+        </p>
+      </>
     );
   }
 }
