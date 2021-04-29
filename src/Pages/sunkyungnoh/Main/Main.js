@@ -8,7 +8,7 @@ import './Main.scss';
 class MainSunkyungnoh extends React.Component {
   render() {
     return (
-      <div className="main">
+      <div className="main_sunkyungnoh">
         <Nav />
         <main>
           <Feeds />

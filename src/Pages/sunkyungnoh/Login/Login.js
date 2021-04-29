@@ -12,7 +12,7 @@ class LoginSunkyungnoh extends React.Component {
 
   render() {
     return (
-      <div className="login">
+      <div className="login_sunkyungnoh">
         <main>
           <LoginSection />
           <CreateAccount />

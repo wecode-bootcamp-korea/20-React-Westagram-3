@@ -5,6 +5,10 @@ function LoginForm() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
+  // const enableBtn = () => {
+  //   return username.includes('@') && password.length >= 6 ? false : true;
+  // };
+
   const onSubmit = e => {
     e.preventDefault();
     console.log(username, password);
