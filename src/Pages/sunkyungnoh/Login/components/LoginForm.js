@@ -2,13 +2,25 @@ import React, { useState } from 'react';
 import './LoginForm.scss';
 
 function LoginForm() {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+
+  const onSubmit = e => {
+    e.preventDefault();
+    console.log(username, password);
+  };
+
   return (
-    <form action="../main/main.html" className="loginForm">
+    <form onSubmit={onSubmit} className="loginForm">
       <div className="enter">
         <label htmlFor="id" className="form-description">
           전화번호, 사용자 이름 또는 이메일
         </label>
         <input
+          value={username}
+          onChange={e => {
+            setUsername(e.target.value);
+          }}
           className="input ID"
           type="text"
           aria-label="전화번호, 사용자 이름 또는 이메일"
@@ -24,16 +36,20 @@ function LoginForm() {
           비밀번호{' '}
         </label>
         <input
+          value={password}
+          onChange={e => {
+            setPassword(e.target.value);
+          }}
           className="input PW"
           id="pw"
           name="pw"
-          type="password"
+          type="text"
           aria-label="비밀번호"
           minLength="1"
           required
         />
       </div>
-      <button type="submit" className="login btn" disabled onClick>
+      <button type="submit" className="login btn">
         로그인
       </button>
       <div className="loginOption">
