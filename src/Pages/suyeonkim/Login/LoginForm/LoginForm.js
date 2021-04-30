@@ -3,8 +3,12 @@ import { withRouter } from 'react-router-dom';
 import './LoginForm.scss';
 
 class LoginForm extends React.Component {
+  goToMain = () => {
+    this.props.history.push('/Main-suyeonkim');
+  };
+
   render() {
-    const { InputFunction } = this.props;
+    const { id, pw, InputFunction } = this.props;
 
     return (
       <form className="loginForm" onSubmit={InputFunction}>
@@ -20,7 +24,13 @@ class LoginForm extends React.Component {
           onChange={InputFunction}
           name="pw"
         />
-        <button type="button">로그인</button>
+        <button
+          type="button"
+          onClick={this.goToMain}
+          disabled={id.includes('@') && pw.length > 5 ? false : true}
+        >
+          로그인
+        </button>
       </form>
     );
   }
