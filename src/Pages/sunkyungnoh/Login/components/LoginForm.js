@@ -67,7 +67,9 @@ class LoginForm extends React.Component {
           // }
           className={
             'login btn ' +
-            (this.state.username && this.state.password && 'active')
+            (this.state.username.includes('@') &&
+              this.state.password.length >= 6 &&
+              'active')
           }
           disabled={this.state.username && this.state.password ? false : true}
         >
