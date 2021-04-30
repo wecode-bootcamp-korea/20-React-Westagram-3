@@ -4,8 +4,21 @@ import './Login.scss';
 import '../../../Styles/seyongyun/common.scss';
 
 class LoginSeyongyun extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      id: 'none',
+    };
+  }
+
   goToMain = () => {
     this.props.history.push('/Main-Seyongyun');
+  };
+
+  handleIdInput = e => {
+    this.setState({
+      id: e.target.value,
+    });
   };
 
   render() {
@@ -19,7 +32,9 @@ class LoginSeyongyun extends React.Component {
                 className="idInput"
                 type="text"
                 placeholder="전화번호,사용자 이름 또는 이메일"
+                onChange={this.handleIdInput}
               />
+              {console.log(this.state.id)}
             </p>
             <p>
               <input
