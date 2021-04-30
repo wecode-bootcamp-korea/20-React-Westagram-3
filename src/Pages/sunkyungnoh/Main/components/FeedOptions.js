@@ -5,7 +5,7 @@ class FeedOptions extends React.Component {
   constructor() {
     super();
     this.state = {
-      like: 0,
+      like: false,
     };
   }
 
@@ -13,7 +13,7 @@ class FeedOptions extends React.Component {
     const { like } = this.state;
 
     this.setState({
-      like: like + 1,
+      like: true,
     });
   };
 
@@ -37,7 +37,7 @@ class FeedOptions extends React.Component {
           </button>
         </section>
         <p className="numOfLikes">
-          좋아요 &nbsp;<span>{like}</span>개
+          좋아요 &nbsp;<span>{like ? 1 : 0}</span>개
         </p>
       </>
     );
