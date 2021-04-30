@@ -10,11 +10,9 @@ class FeedOptions extends React.Component {
   }
 
   addLike = () => {
-    const { like } = this.state;
-
-    this.setState({
-      like: true,
-    });
+    this.setState(prevState => ({
+      like: !prevState.like,
+    }));
   };
 
   render() {
