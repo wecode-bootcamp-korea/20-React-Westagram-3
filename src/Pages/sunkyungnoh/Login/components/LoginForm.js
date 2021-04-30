@@ -27,7 +27,7 @@ class LoginForm extends React.Component {
     const isValid = username.includes('@') && password.length >= 6;
 
     return (
-      <form className="loginForm">
+      <form className="loginForm" action="/Main-sunkyungnoh">
         <div className="enter">
           <label
             htmlFor="id"
@@ -43,7 +43,6 @@ class LoginForm extends React.Component {
             aria-label="전화번호, 사용자 이름 또는 이메일"
             name="userName"
             id="id"
-            minLength="1"
             required
           />
         </div>
@@ -62,7 +61,6 @@ class LoginForm extends React.Component {
             name="pw"
             type="text"
             aria-label="비밀번호"
-            minLength="1"
             required
           />
         </div>
