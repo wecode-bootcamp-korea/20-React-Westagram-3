@@ -1,17 +1,41 @@
-.StoryBox {
+.StoryBoxGaramsong {
   display: flex;
   justify-content: space-between;
+  width: 100%;
   overflow: hidden;
-  padding: 5px;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
 
   .eachStory {
-    width: 15%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
     padding: 5px;
     text-align: center;
     font-size: 0.7rem;
 
-    img {
-      width: 100%;
+    .storyImgBox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 60px;
+      height: 60px;
+      margin-bottom: 5px;
+      background: linear-gradient(rgba(255, 48, 108, 1), rgba(252, 175, 69, 1));
+      border-radius: 50%;
+      text-align: center;
+
+      .storyImg {
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+      }
     }
   }
 }

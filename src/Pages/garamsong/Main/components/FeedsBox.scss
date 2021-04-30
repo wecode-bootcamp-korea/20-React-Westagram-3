@@ -1,17 +1,20 @@
-.FeedsBox {
-  margin-top: 10px;
+.FeedsBoxGaramsong {
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
 
   .feed {
-    padding: 10px;
-
     .feedInfo {
       display: flex;
       justify-content: space-between;
+      padding: 5px;
+      border: 1px solid red;
 
       .feedProfilePhoto {
         display: flex;
         justify-content: flex-start;
         padding: 3px;
+        border: 1px solid red;
 
         img {
           width: 45px;
@@ -22,12 +25,14 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 90%;
+        width: 95%;
         padding: 5px;
+        border: 1px solid red;
 
         .feedInfoText {
           font-size: 0.7rem;
           color: #222;
+          border: 1px solid red;
 
           .feedUserName {
             margin-bottom: 5px;
@@ -41,9 +46,11 @@
         }
 
         .moreInfo {
-          color: rgba(50, 50, 50, 1);
-          font-size: 1.3rem;
-          font-weight: bold;
+          border: 1px solid red;
+          img {
+            width: 30px;
+            height: 20px;
+          }
         }
       }
     }
@@ -61,14 +68,18 @@
       justify-content: space-between;
       padding: 5px;
       font-size: 1.2rem;
+      border: 1px solid red;
     }
 
     .replyCountLike {
       display: flex;
       align-items: center;
       font-size: 0.7rem;
+      height: 40px;
+      border: 1px solid red;
 
       img {
+        height: 20px;
         margin-right: 3px;
       }
     }
@@ -77,6 +88,7 @@
       display: flex;
       margin: 3px auto;
       font-size: 0.7rem;
+      border: 1px solid red;
 
       h4 {
         margin-right: 5px;
@@ -87,6 +99,7 @@
     .seeAllReply {
       margin: 3px auto;
       font-size: 0.7rem;
+      border: 1px solid red;
     }
 
     .replyValue {
@@ -96,6 +109,7 @@
       position: relative;
       width: 100%;
       margin-bottom: 3px;
+      border: 1px solid red;
 
       .userId {
         margin-right: 10px;

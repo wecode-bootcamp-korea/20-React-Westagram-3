@@ -4,7 +4,7 @@ import './FeedsBox.scss';
 class FeedsBox extends React.Component {
   render() {
     return (
-      <div className="FeedsBox">
+      <div className="FeedsBoxGaramsong">
         <article className="feed">
           <header className="feedInfo">
             <div className="feedProfilePhoto">
@@ -19,7 +19,12 @@ class FeedsBox extends React.Component {
                 <p className="feedUserName">galmi.song</p>
                 <p className="feedLocation">선릉역 7번출구</p>
               </div>
-              <div className="moreInfo">...</div>
+              <div className="moreInfo">
+                <img
+                  alt="moreInfo"
+                  src="https://img1.wsimg.com/isteam/ip/643ea9c5-405a-49f4-9e0b-4aa7c13ebdfc/Dots%201.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=h:500,cg:true/rs=w:1536"
+                />
+              </div>
             </div>
           </header>
           <div className="feedPhoto">
@@ -30,17 +35,15 @@ class FeedsBox extends React.Component {
           </div>
           <div className="replyContainer">
             <div className="replyIcons">
-              <div className="replyIconsLeft">
-                <i className="far fa-heart"></i>
-                <i className="far fa-comment"></i>
-                <i className="far fa-paper-plane"></i>
-              </div>
-              <div className="replyIconsRight">
-                <i className="far fa-bookmark"></i>
-              </div>
+              <div className="replyIconsLeft"></div>
+              <div className="replyIconsRight"></div>
             </div>
             <div className="replyCountLike">
-              <img alt="profile" src="" />
+              <img
+                alt="profile"
+                className="profileImgRadius"
+                src="https://instagram.ficn1-1.fna.fbcdn.net/v/t51.2885-15/fr/e15/s1080x1080/136104948_4163154857046764_3738331688912679177_n.jpg?tp=1&_nc_ht=instagram.ficn1-1.fna.fbcdn.net&_nc_cat=108&_nc_ohc=IKwOXsuj62UAX_aXzz_&edm=AP_V10EAAAAA&ccb=7-4&oh=22ea6db9600f632251b2fe2e1d81007f&oe=60A5AEB4&_nc_sid=4f375e"
+              />
               <span>username님 외num명이 좋아합니다</span>
             </div>
             <div className="feedDescription">
@@ -76,7 +79,7 @@ class FeedsBox extends React.Component {
             <form className="replyBar">
               <i className="emoji far fa-grin"></i>
               <input type="text" className="typeBar" />
-              <button className="post">게시</button>
+              <button className="change post">게시</button>
             </form>
           </div>
         </article>

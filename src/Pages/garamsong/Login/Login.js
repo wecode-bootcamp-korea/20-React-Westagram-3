@@ -9,7 +9,7 @@ class Login extends React.Component {
 
   render() {
     return (
-      <div className="Login">
+      <div className="LoginGaramsong">
         <section className="loginContainer">
           <div className="loginLogoContainer">
             <h1 className="loginLogo">Westagram</h1>

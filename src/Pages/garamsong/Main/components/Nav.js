@@ -4,7 +4,7 @@ import './Nav.scss';
 class Nav extends React.Component {
   render() {
     return (
-      <nav className="nav">
+      <nav className="NavGaramsong">
         <div className="navContainer">
           <div className="logoContainer">
             <a href="https://www.instagram.com/" target="_blank">

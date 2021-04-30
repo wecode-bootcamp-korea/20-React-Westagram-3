@@ -5,7 +5,7 @@ import './RightBox.scss';
 class RightBox extends React.Component {
   render() {
     return (
-      <aside className="RightBox">
+      <aside className="RightBoxGaramsong">
         <div className="myProfileBox">
           <div className="profilePhoto">
             <img
@@ -25,7 +25,7 @@ class RightBox extends React.Component {
         <div className="recommendBox">
           <div className="recommendTitleBox">
             <div className="title">회원님을 위한 추천</div>
-            <div className="seeAll">모두 보기</div>
+            <div className="change seeAll">모두 보기</div>
           </div>
           <div className="otherUserBox">
             <div className="profilePhoto">
