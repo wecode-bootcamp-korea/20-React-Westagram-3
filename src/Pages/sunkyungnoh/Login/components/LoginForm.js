@@ -31,16 +31,14 @@ class LoginForm extends React.Component {
         <div className="enter">
           <label
             htmlFor="id"
-            className={
-              username ? 'form-description focused' : 'form-description'
-            }
+            className={`form-description ${username ? 'focused' : ''}`}
           >
             전화번호, 사용자 이름 또는 이메일
           </label>
           <input
             value={username}
             onChange={this.handleIdInput}
-            className={username ? 'input id entered' : 'input id'}
+            className={`input pw ${username ? 'entered' : ''}`}
             type="text"
             aria-label="전화번호, 사용자 이름 또는 이메일"
             name="userName"
@@ -52,16 +50,14 @@ class LoginForm extends React.Component {
         <div className="enter">
           <label
             htmlFor="pw"
-            className={
-              password ? 'form-description focused' : 'form-description'
-            }
+            className={`form-description ${password ? 'focused' : ''}`}
           >
             비밀번호
           </label>
           <input
             value={password}
             onChange={this.handlePwInput}
-            className={password ? 'input pw entered' : 'input pw'}
+            className={`input pw ${password ? 'entered' : ''}`}
             id="pw"
             name="pw"
             type="text"
@@ -73,7 +69,7 @@ class LoginForm extends React.Component {
         <button
           type="submit"
           className={`login btn ${isValid ? 'active' : ''}`}
-          disabled={username && password ? false : true}
+          disabled={isValid && false}
         >
           로그인
         </button>
