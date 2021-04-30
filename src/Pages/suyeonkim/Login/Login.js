@@ -5,20 +5,30 @@ import '../styles/styles.scss';
 import './Login.scss';
 
 class Login extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
 
-    this.handleCreate = data => {
-      console.log(data);
+    this.state = {
+      id: '',
+      pw: '',
     };
   }
 
+  handleIdInput = e => {
+    const tg = e.target;
+    this.setState({
+      [tg.name]: tg.value,
+    });
+  };
+
   render() {
+    const { id, pw } = this.state;
+
     return (
       <div className="login_suyeonkim">
         <div>
           <h1>Westagram</h1>
-          <LoginForm onCreate={this.handleCreate} />
+          <LoginForm id={id} pw={pw} InputFunction={this.handleIdInput} />
           <ForgotPassword />
         </div>
       </div>
