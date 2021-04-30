@@ -60,10 +60,14 @@ class LoginForm extends React.Component {
         </div>
         <button
           type="submit"
+          // className={
+          //   this.state.username && this.state.password
+          //     ? 'login btn active'
+          //     : 'login btn'
+          // }
           className={
-            this.state.username && this.state.password
-              ? 'login btn active'
-              : 'login btn'
+            'login btn ' +
+            (this.state.username && this.state.password && 'active')
           }
           disabled={this.state.username && this.state.password ? false : true}
         >
