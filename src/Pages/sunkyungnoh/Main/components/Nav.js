@@ -5,7 +5,6 @@ import './Nav.scss';
 class Nav extends React.Component {
   goToLogin = () => {
     this.props.history.push('/Login-sunkyungnoh');
-    //commit 잘못남겼다..!
   };
 
   render() {

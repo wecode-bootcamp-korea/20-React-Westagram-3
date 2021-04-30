@@ -26,13 +26,20 @@ class LoginForm extends React.Component {
     return (
       <form className="loginForm">
         <div className="enter">
-          <label htmlFor="id" className="form-description">
+          <label
+            htmlFor="id"
+            className={
+              this.state.username
+                ? 'form-description focused'
+                : 'form-description'
+            }
+          >
             전화번호, 사용자 이름 또는 이메일
           </label>
           <input
             value={this.state.username}
             onChange={this.handleIdInput}
-            className="input ID"
+            className={this.state.username ? 'input id entered' : 'input id'}
             type="text"
             aria-label="전화번호, 사용자 이름 또는 이메일"
             name="userName"
@@ -42,14 +49,20 @@ class LoginForm extends React.Component {
           />
         </div>
         <div className="enter">
-          <label htmlFor="pw" className="form-description">
-            {' '}
-            비밀번호{' '}
+          <label
+            htmlFor="pw"
+            className={
+              this.state.password
+                ? 'form-description focused'
+                : 'form-description'
+            }
+          >
+            비밀번호
           </label>
           <input
             value={this.state.password}
             onChange={this.handlePwInput}
-            className="input PW"
+            className={this.state.password ? 'input pw entered' : 'input pw'}
             id="pw"
             name="pw"
             type="text"
@@ -60,11 +73,6 @@ class LoginForm extends React.Component {
         </div>
         <button
           type="submit"
-          // className={
-          //   this.state.username && this.state.password
-          //     ? 'login btn active'
-          //     : 'login btn'
-          // }
           className={
             'login btn ' +
             (this.state.username.includes('@') &&
