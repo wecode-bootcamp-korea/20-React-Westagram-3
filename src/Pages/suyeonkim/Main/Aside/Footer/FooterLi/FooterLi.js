@@ -55,13 +55,11 @@ class FooterLi extends React.Component {
   }
 
   render() {
-    const list = this.state.tagLinks.map((el, index) => {
-      return (
-        <li className="footer__link" key={index}>
-          <a href={el.linkURL}>{el.linkName}</a>
-        </li>
-      );
-    });
+    const list = this.state.tagLinks.map((el, index) => (
+      <li className="footer__link" key={index}>
+        <a href={el.linkURL}>{el.linkName}</a>
+      </li>
+    ));
 
     return <>{list}</>;
   }

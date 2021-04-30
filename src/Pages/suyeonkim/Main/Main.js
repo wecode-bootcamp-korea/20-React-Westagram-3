@@ -9,7 +9,7 @@ class Main extends React.Component {
     return (
       <>
         <Nav />
-        <main className="main-page">
+        <main className="main_suyeonkim">
           <Feeds />
           <Aside />
         </main>

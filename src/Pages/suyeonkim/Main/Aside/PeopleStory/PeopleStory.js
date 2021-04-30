@@ -4,6 +4,8 @@ import './PeopleStory.scss';
 
 class PeopleStory extends React.Component {
   render() {
+    const { StoryInfo } = this.props;
+
     return (
       <section className="people__story">
         <div className="people__story-top">
@@ -11,7 +13,7 @@ class PeopleStory extends React.Component {
           <div className="people__story__show">모두 보기</div>
         </div>
         <ul className="people__story__person__list">
-          <PeopleLi />
+          <PeopleLi Infos={StoryInfo} />
         </ul>
       </section>
     );

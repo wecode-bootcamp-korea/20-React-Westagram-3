@@ -37,10 +37,9 @@
     &:active {
       opacity: 0.6;
     }
-
-    &:disabled {
-      opacity: 0.3;
-      cursor: inherit;
-    }
+  }
+  .disabled {
+    opacity: 0.3;
+    cursor: inherit;
   }
 }
