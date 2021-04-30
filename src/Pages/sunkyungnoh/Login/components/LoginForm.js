@@ -1,75 +1,89 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './LoginForm.scss';
 
-function LoginForm() {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+class LoginForm extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      username: '',
+      password: '',
+    };
+  }
 
-  // const enableBtn = () => {
-  //   return username.includes('@') && password.length >= 6 ? false : true;
-  // };
-
-  const onSubmit = e => {
-    e.preventDefault();
-    console.log(username, password);
+  handleIdInput = e => {
+    this.setState({
+      username: e.target.value,
+    });
   };
 
-  return (
-    <form onSubmit={onSubmit} className="loginForm">
-      <div className="enter">
-        <label htmlFor="id" className="form-description">
-          전화번호, 사용자 이름 또는 이메일
-        </label>
-        <input
-          value={username}
-          onChange={e => {
-            setUsername(e.target.value);
-          }}
-          className="input ID"
-          type="text"
-          aria-label="전화번호, 사용자 이름 또는 이메일"
-          name="userName"
-          id="id"
-          minLength="1"
-          required
-        />
-      </div>
-      <div className="enter">
-        <label htmlFor="pw" className="form-description">
-          {' '}
-          비밀번호{' '}
-        </label>
-        <input
-          value={password}
-          onChange={e => {
-            setPassword(e.target.value);
-          }}
-          className="input PW"
-          id="pw"
-          name="pw"
-          type="text"
-          aria-label="비밀번호"
-          minLength="1"
-          required
-        />
-      </div>
-      <button type="submit" className="login btn">
-        로그인
-      </button>
-      <div className="loginOption">
-        <p>또는</p>
-      </div>
-      <a
-        className="facebook"
-        href="https://m.facebook.com/?locale2=ko_KR"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <img alt="facebook logo" src="/images/sunkyungnoh/facebook.png" />
-        <span>Facebook으로 로그인</span>
-      </a>
-    </form>
-  );
+  handlePwInput = e => {
+    this.setState({
+      password: e.target.value,
+    });
+  };
+
+  render() {
+    return (
+      <form className="loginForm">
+        <div className="enter">
+          <label htmlFor="id" className="form-description">
+            전화번호, 사용자 이름 또는 이메일
+          </label>
+          <input
+            value={this.state.username}
+            onChange={this.handleIdInput}
+            className="input ID"
+            type="text"
+            aria-label="전화번호, 사용자 이름 또는 이메일"
+            name="userName"
+            id="id"
+            minLength="1"
+            required
+          />
+        </div>
+        <div className="enter">
+          <label htmlFor="pw" className="form-description">
+            {' '}
+            비밀번호{' '}
+          </label>
+          <input
+            value={this.state.password}
+            onChange={this.handlePwInput}
+            className="input PW"
+            id="pw"
+            name="pw"
+            type="text"
+            aria-label="비밀번호"
+            minLength="1"
+            required
+          />
+        </div>
+        <button
+          type="submit"
+          className={
+            this.state.username && this.state.password
+              ? 'login btn active'
+              : 'login btn'
+          }
+          disabled={this.state.username && this.state.password ? false : true}
+        >
+          로그인
+        </button>
+        <div className="loginOption">
+          <p>또는</p>
+        </div>
+        <a
+          className="facebook"
+          href="https://m.facebook.com/?locale2=ko_KR"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img alt="facebook logo" src="/images/sunkyungnoh/facebook.png" />
+          <span>Facebook으로 로그인</span>
+        </a>
+      </form>
+    );
+  }
 }
 
 export default LoginForm;
