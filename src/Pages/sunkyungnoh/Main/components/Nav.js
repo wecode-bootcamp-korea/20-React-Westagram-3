@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import './Nav.scss';
 
 class Nav extends React.Component {
@@ -22,9 +22,9 @@ class Nav extends React.Component {
           </label>
         </div>
         <div className="linksOfMenu">
-          <a href="main.html" target="_blank">
+          <Link to="/Main-sunkyungnoh">
             <img aria-label="홈" src="/images/sunkyungnoh/home.png" />
-          </a>
+          </Link>
           <a
             href="https://www.instagram.com/direct/inbox/"
             target="_blank"
