@@ -46,7 +46,10 @@ class Comments extends React.Component {
             type="text"
             placeholder="댓글 달기 ..."
           />
-          <button type="submit" className="commentBtn">
+          <button
+            type="submit"
+            className={`commentBtn ${this.state.newComment && 'active'}`}
+          >
             게시
           </button>
         </form>
