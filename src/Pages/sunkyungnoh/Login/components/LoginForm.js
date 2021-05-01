@@ -59,7 +59,7 @@ class LoginForm extends React.Component {
             className={`input pw ${password ? 'entered' : ''}`}
             id="pw"
             name="pw"
-            type="text"
+            type="password"
             aria-label="비밀번호"
             required
           />
@@ -67,7 +67,7 @@ class LoginForm extends React.Component {
         <button
           type="submit"
           className={`login btn ${isValid ? 'active' : ''}`}
-          disabled={isValid && false}
+          disabled={isValid ? false : true}
         >
           로그인
         </button>
