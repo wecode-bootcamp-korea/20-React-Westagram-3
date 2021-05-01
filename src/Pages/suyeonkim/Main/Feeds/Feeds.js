@@ -25,10 +25,11 @@ class Feeds extends React.Component {
         time: '42분전',
       },
       feedComment: [],
+      value: '',
     };
   }
 
-  addComment = e => {
+  addCommentBar = e => {
     if (e.key === 'Enter') {
       if (!e.target.value) {
         return;
@@ -39,6 +40,18 @@ class Feeds extends React.Component {
       });
       e.target.value = '';
     }
+  };
+
+  addCommentBtn = e => {
+    if (this.state.value) {
+      this.setState({
+        feedComment: this.state.feedComment.concat(this.state.value),
+      });
+    }
+  };
+
+  changekey = e => {
+    this.state.value = e.target.value;
   };
 
   render() {
@@ -74,9 +87,14 @@ class Feeds extends React.Component {
                 type="text"
                 placeholder="댓글 달기..."
                 className="feed__commentBar"
-                onKeyPress={this.addComment}
+                onKeyPress={this.addCommentBar}
+                onChange={this.changekey}
               />
-              <button type="button" className="feed__comment__upload">
+              <button
+                type="button"
+                className="feed__comment__upload"
+                onClick={this.addCommentBtn}
+              >
                 게시
               </button>
             </div>
