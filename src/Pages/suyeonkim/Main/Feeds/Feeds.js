@@ -3,8 +3,9 @@ import FeedTop from './FeedTop/FeedTop';
 import FeedsBtn from './FeedBtn/FeedsBtn';
 import WhoLike from './WhoLike/WhoLike';
 import FeedImg from './FeedImg/FeedImg';
+import FeedComment from './FeedComment/FeedComment';
 import './Feeds.scss';
-import './FeedContent/FeedContent.scss';
+import './FeedComment/FeedContent.scss';
 
 class Feeds extends React.Component {
   constructor() {
@@ -55,19 +56,7 @@ class Feeds extends React.Component {
   };
 
   render() {
-    const { feedTop, feedImg, feedContent } = this.state;
-
-    const list = this.state.feedComment.map((el, index) => (
-      <li className="feed__comments__list" key={index}>
-        <p className="feed__comments__contents">{el}</p>
-        <div className="feed__comments__goodBtn">
-          <img alt="good__button" src="/images/suyeonkim/dm.png" />
-        </div>
-        <div className="feed__comments__delBtn">
-          <img alt="delete__button" src="/images/suyeonkim/comment.jpg" />
-        </div>
-      </li>
-    ));
+    const { feedTop, feedImg, feedContent, feedComment } = this.state;
 
     return (
       <ul className="feeds-page">
@@ -79,7 +68,9 @@ class Feeds extends React.Component {
             <WhoLike />
             <div className="feed__info">
               <p className="feed__info__paragraph">{feedContent.content}</p>
-              <ul className="feed__comments__lists">{list}</ul>
+              <ul className="feed__comments__lists">
+                <FeedComment commentLi={feedComment} />
+              </ul>
               <div className="feed__info__date">{feedContent.time}</div>
             </div>
             <div className="feed__comments">
