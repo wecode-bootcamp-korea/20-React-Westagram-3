@@ -10,6 +10,7 @@ import LoginSuyeonkim from './Pages/suyeonkim/Login/Login';
 import MainSuyeonkim from './Pages/suyeonkim/Main/Main';
 import LoginWonkeunchoi from './Pages/wonkeunchoi/Login/Login';
 import MainWonkeunchoi from './Pages/wonkeunchoi/Main/Main';
+import Test from './Pages/sunkyungnoh/test/Test';
 
 class Routes extends React.Component {
   render() {
@@ -24,6 +25,7 @@ class Routes extends React.Component {
           <Route exact path="/Main-garamsong" component={MainGaramsong} />
           <Route exact path="/Login-sunkyungnoh" component={LoginSunkyungnoh} />
           <Route exact path="/Main-sunkyungnoh" component={MainSunkyungnoh} />
+          <Route exact path="/Test" component={Test} />
           <Route exact path="/Login-wonkeunchoi" component={LoginWonkeunchoi} />
           <Route exact path="/Main-wonkeunchoi" component={MainWonkeunchoi} />
         </Switch>

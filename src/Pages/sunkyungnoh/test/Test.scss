@@ -1,0 +1,42 @@
+.parent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid black;
+
+  img {
+    width: 60px;
+    height: 60px;
+  }
+
+  h1 {
+    &.highlighted {
+      color: blue;
+    }
+  }
+
+  .child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+
+    h2 {
+      &.highlighted {
+        color: red;
+      }
+    }
+  }
+
+  button {
+    font-size: 16px;
+    background-color: cadetblue;
+    border-radius: 4px;
+    margin: 10px;
+  }
+}
