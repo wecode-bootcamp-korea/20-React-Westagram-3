@@ -1,10 +1,27 @@
 ul {
-  padding: 0 16px;
+  padding: 16px 16px 0;
   font-size: 14px;
 
   li {
+    display: flex;
+    margin-bottom: 6px;
     list-style: none;
     list-style-position: inside;
+
+    span {
+      margin-right: 4px;
+      width: 10%;
+    }
+    div {
+      width: 85%;
+    }
+    button {
+      width: 5%;
+    }
+    img {
+      width: 14px;
+      justify-self: flex-end;
+    }
   }
 }
 

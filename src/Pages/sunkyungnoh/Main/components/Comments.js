@@ -1,5 +1,7 @@
 import React from 'react';
 import './Comments.scss';
+import Comment from './comment';
+import DefaultCm from './defaultCm';
 
 class Comments extends React.Component {
   constructor() {
@@ -8,6 +10,11 @@ class Comments extends React.Component {
       commentArr: [],
       newCommemt: '',
       empty: '',
+      defaultCms: [
+        { id: '선경', msg: '우와' },
+        { id: '도리', msg: '신기' },
+        { id: '노돌', msg: '하다' },
+      ],
     };
   }
 
@@ -24,14 +31,16 @@ class Comments extends React.Component {
   };
 
   render() {
+    const { commentArr, newComment, empty, defaultCms } = this.state;
     return (
       <div className="comments">
         <ul className="commentList">
-          <li className="comment">
-            {this.state.commentArr.map(i => (
-              <div>{i}</div>
-            ))}
-          </li>
+          {defaultCms.map(cm => (
+            <DefaultCm id={cm.id} msg={cm.msg} />
+          ))}
+          {commentArr.map(text => (
+            <Comment text={text} />
+          ))}
         </ul>
         <form onSubmit={this.addComment}>
           <input
@@ -39,7 +48,7 @@ class Comments extends React.Component {
               this.setState({ newComment: e.target.value });
               this.setState({ empty: e.target.value });
             }}
-            value={this.state.empty}
+            value={empty}
             className="commentInput"
             name="commentInput"
             method="post"
@@ -48,7 +57,7 @@ class Comments extends React.Component {
           />
           <button
             type="submit"
-            className={`commentBtn ${this.state.newComment && 'active'}`}
+            className={`commentBtn ${newComment && 'active'}`}
           >
             게시
           </button>
