@@ -12,13 +12,21 @@
 }
 
 .navBar__header {
+  display: flex;
+  align-items: center;
   font-size: 32px;
   font-family: 'Lobster', cursive;
-}
 
-.navBar__header i::after {
-  content: '|';
-  margin-left: 10px;
+  img {
+    width: 30px;
+    height: 30px;
+  }
+
+  span {
+    &::before {
+      content: '|';
+    }
+  }
 }
 
 .navBar__search {
@@ -30,9 +38,13 @@
 
 .navBar__search-icon {
   position: absolute;
-  top: 10px;
+  top: 9px;
   left: 10px;
-  font-size: 10px;
+
+  img {
+    width: 10px;
+    height: 10px;
+  }
 }
 
 .nav__searchBar {

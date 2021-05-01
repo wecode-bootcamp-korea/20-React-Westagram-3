@@ -7,17 +7,17 @@ class FeedsBtn extends React.Component {
       <div className="feed__btn">
         <div className="feed__btn__interact">
           <button className="feed__btn__like">
-            <i className="far fa-heart"></i>
+            <img alt="heart__Button" src="/images/suyeonkim/heart.png" />
           </button>
           <button className="feed__btn__comment">
-            <i className="far fa-comment"></i>
+            <img alt="comment__button" src="/images/suyeonkim/comment.jpg" />
           </button>
           <button className="feed__btn__upload">
-            <i className="far fa-share-square"></i>
+            <img alt="dm__button" src="/images/suyeonkim/dm.png" />
           </button>
         </div>
         <div className="feed__btn__marker">
-          <i className="far fa-bookmark"></i>
+          <img alt="bookmark__button" src="/images/suyeonkim/bookMark.png" />
         </div>
       </div>
     );

@@ -7,13 +7,13 @@ class Nav extends React.Component {
     return (
       <nav className="navBar">
         <header className="navBar__header">
-          <i className="fab fa-instagram"></i>
+          <img alt="header" src="/images/suyeonkim/pngegg.png" />
           <span className="header__title">Westagram</span>
         </header>
         <div className="navBar__search">
           <div className="navBar__searchBar">
             <div className="navBar__search-icon">
-              <i className="fas fa-search"></i>
+              <img alt="search" src="/images/suyeonkim/searchIcon.png" />
             </div>
             <input type="text" placeholder="검색" className="nav__searchBar" />
           </div>

@@ -10,12 +10,9 @@
   @include flexBox(center, center, row);
 }
 
-.feed__btn__interact button,
-.feed__btn__maker {
-  font-size: 30px;
-}
-
-.feed__btn__interact button {
-  margin-right: 20px;
+button > img,
+.feed__btn__marker > img {
+  width: 20px;
+  height: 20px;
   cursor: pointer;
 }

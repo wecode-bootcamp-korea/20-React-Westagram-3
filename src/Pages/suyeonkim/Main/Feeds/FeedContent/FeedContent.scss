@@ -24,7 +24,9 @@
   width: 400px;
 }
 
-.feed__comments__goodBtn i {
+.feed__comments__goodBtn img {
+  width: 20px;
+  height: 20px;
   transition: all 0.3s ease;
   cursor: pointer;
 }
@@ -37,13 +39,19 @@
   position: absolute;
   right: 30px;
   display: none;
+
+  img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
 }
 
 .feed__comments__list:hover .feed__comments__delBtn {
   display: inline-block;
 }
 
-.feed__comments__goodBtn i:hover {
+.feed__comments__goodBtn img:hover {
   transform: scale(1.2);
 }
 
