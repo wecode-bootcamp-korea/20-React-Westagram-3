@@ -11,7 +11,6 @@ class Comments extends React.Component {
       newCommemt: '',
       empty: '',
       defaultCms: [
-        { id: '선경', msg: '우와' },
         { id: '도리', msg: '신기' },
         { id: '노돌', msg: '하다' },
       ],
