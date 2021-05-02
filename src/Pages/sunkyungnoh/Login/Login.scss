@@ -7,12 +7,15 @@
 
 .login_sunkyungnoh {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  flex-wrap: wrap;
   height: 100vh;
   box-sizing: border-box;
-  margin: 0;
+  padding: 30px 0;
   background-color: #fafafa;
+
+  main {
+    width: fit-content;
+  }
 }

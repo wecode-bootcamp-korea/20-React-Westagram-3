@@ -3,6 +3,7 @@ import LoginSection from './components/LoginSection.js';
 import CreateAccount from './components/CreateAccount.js';
 import Appstore from './components/Appstore.js';
 import Footer from './components/Footer.js';
+import Slide from './components/Slide.js';
 import './Login.scss';
 
 class LoginSunkyungnoh extends React.Component {
@@ -13,6 +14,7 @@ class LoginSunkyungnoh extends React.Component {
   render() {
     return (
       <div className="login_sunkyungnoh">
+        <Slide />
         <main>
           <LoginSection />
           <CreateAccount />
