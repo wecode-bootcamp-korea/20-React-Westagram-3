@@ -25,10 +25,18 @@ class Comments extends React.Component {
   }
 
   addComment = e => {
-    const { commentArr, newComment } = this.state;
     e.preventDefault();
-    commentArr.push(newComment);
+    const { commentArr, newComment } = this.state;
     this.setState({
+      commentArr: [
+        ...commentArr,
+        {
+          id: commentArr.length + 1,
+          userName: 'wecode',
+          content: newComment,
+          isLiked: false,
+        },
+      ],
       value: '',
     });
   };

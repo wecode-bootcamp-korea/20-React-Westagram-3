@@ -7,10 +7,11 @@ import './Article.scss';
 
 class Article extends React.Component {
   render() {
+    const { url } = this.props;
     return (
       <article>
         <Header />
-        <img alt="posted img" src="" className="photo" />
+        <img alt="posted img" src={url} className="photo" />
         <FeedOptions />
         <PhotoInfo />
         <Comments />
