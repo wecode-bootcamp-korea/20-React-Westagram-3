@@ -8,7 +8,6 @@ class LoginWonkeunchoi extends React.Component {
     this.state = {
       id: '', //앞으로 바뀔 state에 글자가 추가되기 때문입니다.
       pw: '', // 초기 상태는 아무것도 쓰지 않은 공백이 맞겠죠?
-      loginStatus: false,
     };
     // goToMain = () => {
     //   this.props.history.push('/main-wonkeunchoi');
@@ -45,9 +44,21 @@ class LoginWonkeunchoi extends React.Component {
     );
   };
 
+  // buttonChange = e => {
+  //   // const { loginStatus } = this.state;
+  //   const { id, pw } = this.state;
+  //   const isPass = id.includes('@') && pw >= 5;
+
+  //   if (!isPass) {
+  //     this.setState({ loginStatus: true });
+  //   } else {
+  //     this.setState({ loginStatus: false });
+  //   }
+  // };
+
   render() {
-    //const { id, pw, loginStatus } = this.state;
-    // const isEmail = id.includes('@');
+    const { id, pw } = this.state;
+
     // const isPassword = pw;
     return (
       <main className="Login_wonkeunchoi">
@@ -80,7 +91,11 @@ class LoginWonkeunchoi extends React.Component {
                   onChange={this.handlePwClick}
                 />
 
-                <button id="btn_login" onClick={this.goToMain}>
+                <button
+                  id="btn_login"
+                  onClick={this.goToMain}
+                  disabled={id.includes('@') && pw.length >= 5 ? false : true}
+                >
                   로그인
                 </button>
               </form>
@@ -93,7 +108,7 @@ class LoginWonkeunchoi extends React.Component {
   }
 }
 export default LoginWonkeunchoi;
-// export default withRouter(Login);
+// export default withRouter(Login
 
 // withRouter은 함수, input으로 컴포넌트를 받고
 // output으로 인자로 받은 컴포넌트에 페이지 이동 기능을 추가한 컴포넌트를 반환한다.
