@@ -1,7 +1,6 @@
 import React from 'react';
 import './Comments.scss';
 import Comment from './comment';
-import COMMENT from './commentData';
 
 class Comments extends React.Component {
   constructor() {
@@ -14,9 +13,15 @@ class Comments extends React.Component {
   }
 
   componentDidMount() {
-    this.setState({
-      commentArr: COMMENT,
-    });
+    fetch('http://localhost:3000/data/commentData.json', {
+      method: 'GET',
+    })
+      .then(res => res.json())
+      .then(data => {
+        this.setState({
+          commentArr: data,
+        });
+      });
   }
 
   addComment = e => {
