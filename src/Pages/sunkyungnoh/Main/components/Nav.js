@@ -50,9 +50,6 @@ class Nav extends React.Component {
           >
             <img aria-label="좋아요" src="/images/sunkyungnoh/heart.png" />
           </a>
-          <button>
-            <i aria-label="활동피드" className="far fa-heart"></i>
-          </button>
           <a href="https://www.instagram.com/">
             <img
               alt="userProfile"
