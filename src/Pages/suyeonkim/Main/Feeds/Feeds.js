@@ -4,7 +4,6 @@ import FeedsBtn from './FeedBtn/FeedsBtn';
 import WhoLike from './WhoLike/WhoLike';
 import FeedImg from './FeedImg/FeedImg';
 import FeedComment from './FeedComment/FeedComment';
-import CommentData from './commentData';
 import './Feeds.scss';
 
 class Feeds extends React.Component {
@@ -28,6 +27,18 @@ class Feeds extends React.Component {
       feedComment: [],
       value: '',
     };
+  }
+
+  componentDidMount() {
+    fetch('http://localhost:3000/data/commentData.json', {
+      method: 'GET',
+    })
+      .then(res => res.json())
+      .then(data => {
+        this.setState({
+          feedComment: data,
+        });
+      });
   }
 
   addCommentBar = e => {
@@ -70,12 +81,6 @@ class Feeds extends React.Component {
   changekey = e => {
     this.setState({ value: e.target.value });
   };
-
-  componentDidMount() {
-    this.setState({
-      feedComment: CommentData,
-    });
-  }
 
   render() {
     const { feedTop, feedImg, feedContent, feedComment, value } = this.state;
