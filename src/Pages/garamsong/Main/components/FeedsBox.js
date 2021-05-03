@@ -1,8 +1,31 @@
 import React from 'react';
 import './FeedsBox.scss';
+import Comment from './Comment';
+import AddComments from './AddComments';
 
 class FeedsBox extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
+      commentList: [],
+      newComment: '',
+    };
+  }
+
+  addComment = e => {
+    e.preventDefault();
+    this.setState({
+      commentList: [...this.state.commentList, this.state.newComment],
+    });
+  };
+
+  getComment = comment => {
+    this.setState({ newComment: comment });
+  };
+
   render() {
+    const { commentList } = this.state;
     return (
       <div className="FeedsBoxGaramsong">
         <article className="feed">
@@ -53,34 +76,16 @@ class FeedsBox extends React.Component {
             </div>
             <p className="seeAllReply">댓글 num2개 모두 보기</p>
             <ul className="reply">
-              <li className="replyValue">
-                <span className="userId">galmi.song</span>
-                <p className="replyText">댓글창입니다.</p>
-                <button className="like">
-                  <i className="far fa-heart"></i>
-                </button>
-              </li>
-              <li className="replyValue">
-                <span className="userId">galmi.song</span>
-                <p className="replyText">댓글창입니다.</p>
-                <button className="like">
-                  <i className="far fa-heart"></i>
-                </button>
-              </li>
-              <li className="replyValue">
-                <span className="userId">galmi.song</span>
-                <p className="replyText">댓글창입니다.</p>
-                <button className="like">
-                  <i className="far fa-heart"></i>
-                </button>
-              </li>
+              {commentList.map(text => (
+                <Comment text={text} />
+              ))}
             </ul>
             <span className="date">1일 전</span>
-            <form className="replyBar">
-              <i className="emoji far fa-grin"></i>
-              <input type="text" className="typeBar" />
-              <button className="change post">게시</button>
-            </form>
+            <AddComments
+              commentList={commentList}
+              addComment={this.addComment}
+              getComment={this.getComment}
+            />
           </div>
         </article>
       </div>

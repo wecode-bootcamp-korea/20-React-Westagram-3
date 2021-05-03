@@ -9,30 +9,26 @@ class Login extends React.Component {
   constructor() {
     super();
     this.state = {
-      Id: '',
-      Pw: '',
+      id: '',
+      pw: '',
     };
   }
 
   handleIdInput = e => {
-    const { Id } = this.state;
     this.setState({
-      Id: e.target.value,
+      id: e.target.value,
     });
-    console.log(e.target.value);
   };
 
   handlePwInput = e => {
-    const { Pw } = this.state;
     this.setState({
-      Pw: e.target.value,
+      pw: e.target.value,
     });
-    console.log(e.target.value);
   };
-  const;
+
   render() {
-    const { Id, Pw } = this.state;
-    const isValid = Id.includes('@') && Pw.length >= 6;
+    const { id, pw } = this.state;
+    const isValid = id.includes('@') && pw.length >= 6;
     return (
       <div className="LoginGaramsong">
         <section className="loginContainer">
