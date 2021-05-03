@@ -8,7 +8,33 @@ class FeedsBox extends React.Component {
     super();
 
     this.state = {
-      commentList: [],
+      commentList: [
+        {
+          id: 1,
+          userId: 'galmi.song',
+          content: 'himduroyo',
+          isLiked: '♡',
+        },
+        {
+          id: 2,
+          userId: 'ahahah',
+          content: 'hello ah',
+          isLiked: '♡',
+        },
+        {
+          id: 3,
+          userId: 'nananana',
+          content: 'hello na',
+          isLiked: '♡',
+        },
+        {
+          id: 4,
+          userId: 'dadadada',
+          content: 'hello da',
+          isLiked: '♡',
+        },
+      ],
+
       newComment: '',
     };
   }
@@ -16,7 +42,15 @@ class FeedsBox extends React.Component {
   addComment = e => {
     e.preventDefault();
     this.setState({
-      commentList: [...this.state.commentList, this.state.newComment],
+      commentList: [
+        ...this.state.commentList,
+        {
+          id: 4,
+          userId: 'dadadada',
+          content: this.state.newComment,
+          isLiked: '♡',
+        },
+      ],
     });
   };
 
@@ -26,6 +60,7 @@ class FeedsBox extends React.Component {
 
   render() {
     const { commentList } = this.state;
+    console.log(commentList);
     return (
       <div className="FeedsBoxGaramsong">
         <article className="feed">
@@ -76,9 +111,16 @@ class FeedsBox extends React.Component {
             </div>
             <p className="seeAllReply">댓글 num2개 모두 보기</p>
             <ul className="reply">
-              {commentList.map(text => (
-                <Comment text={text} />
-              ))}
+              {commentList.map(el => {
+                return (
+                  <Comment
+                    id={el.id}
+                    userId={el.userId}
+                    content={el.content}
+                    isLiked={el.isLiked}
+                  />
+                );
+              })}
             </ul>
             <span className="date">1일 전</span>
             <AddComments
