@@ -4,6 +4,7 @@ import FeedsBtn from './FeedBtn/FeedsBtn';
 import WhoLike from './WhoLike/WhoLike';
 import FeedImg from './FeedImg/FeedImg';
 import FeedComment from './FeedComment/FeedComment';
+import CommentData from './commentData';
 import './Feeds.scss';
 
 class Feeds extends React.Component {
@@ -37,16 +38,15 @@ class Feeds extends React.Component {
       }
 
       if (value) {
-        this.setState(
-          {
-            feedComment: feedComment.concat(value),
-          },
-          () => {
-            this.setState({
-              value: '',
-            });
-          }
-        );
+        this.setState({
+          feedComment: feedComment.concat({
+            id: feedComment.length + 1,
+            userName: 'jayPark',
+            content: value,
+            isLiked: false,
+          }),
+          value: '',
+        });
       }
     }
   };
@@ -55,16 +55,15 @@ class Feeds extends React.Component {
     const { feedComment, value } = this.state;
 
     if (value) {
-      this.setState(
-        {
-          feedComment: feedComment.concat(value),
-        },
-        () => {
-          this.setState({
-            value: '',
-          });
-        }
-      );
+      this.setState({
+        feedComment: feedComment.concat({
+          id: feedComment.length + 1,
+          userName: 'jayPark',
+          content: value,
+          isLiked: false,
+        }),
+        value: '',
+      });
     }
   };
 
@@ -72,9 +71,14 @@ class Feeds extends React.Component {
     this.setState({ value: e.target.value });
   };
 
+  componentDidMount() {
+    this.setState({
+      feedComment: CommentData,
+    });
+  }
+
   render() {
     const { feedTop, feedImg, feedContent, feedComment, value } = this.state;
-
     return (
       <ul className="feeds-page">
         <li className="feeds">
