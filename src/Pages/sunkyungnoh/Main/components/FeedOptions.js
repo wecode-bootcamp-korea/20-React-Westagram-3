@@ -22,7 +22,11 @@ class FeedOptions extends React.Component {
       <>
         <section className="feedOptions">
           <button onClick={this.addLike}>
-            <img aria-label="좋아요" src="/images/sunkyungnoh/heart.png" />
+            <img
+              style={{ backgroundColor: like ? 'red' : '' }}
+              aria-label="좋아요"
+              src="/images/sunkyungnoh/heart.png"
+            />
           </button>
           <button>
             <img aria-label="direct" src="/images/sunkyungnoh/dm.png" />

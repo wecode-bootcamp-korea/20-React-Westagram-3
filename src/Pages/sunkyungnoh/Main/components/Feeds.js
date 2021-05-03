@@ -7,29 +7,29 @@ class Feeds extends React.Component {
   constructor() {
     super();
     this.state = {
-      url: [],
+      feeds: [],
     };
   }
 
   componentDidMount() {
-    fetch('http://localhost:3000/data/urlData.json', {
+    fetch('http://localhost:3000/data/feedData.json', {
       method: 'GET',
     })
       .then(res => res.json())
       .then(data => {
         this.setState({
-          url: data,
+          feeds: data,
         });
       });
   }
 
   render() {
-    const { url } = this.state;
+    const { feeds } = this.state;
     return (
       <div className="feeds">
         <StoryBox />
-        {url.map(url => (
-          <Article url={url} />
+        {feeds.map(feed => (
+          <Article key={feed.userId} feed={feed} />
         ))}
       </div>
     );

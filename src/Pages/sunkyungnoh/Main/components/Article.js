@@ -7,14 +7,15 @@ import './Article.scss';
 
 class Article extends React.Component {
   render() {
-    const { url } = this.props;
+    const { feed } = this.props;
+    console.log(feed.commentArr);
     return (
       <article>
-        <Header />
-        <img alt="posted img" src={url} className="photo" />
+        <Header userId={feed.userId} />
+        <img alt="posted img" src={feed.url} className="photo" />
         <FeedOptions />
-        <PhotoInfo />
-        <Comments />
+        <PhotoInfo desc={feed.desc} userId={feed.userId} />
+        <Comments prevComment={feed.commentArr} />
       </article>
     );
   }

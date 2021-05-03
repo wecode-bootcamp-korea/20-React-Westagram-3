@@ -3,10 +3,11 @@ import React from 'react';
 
 class PhotoInfo extends React.Component {
   render() {
+    const { desc, userId } = this.props;
     return (
       <div className="photoInfo">
-        <p className="userID">dory</p>
-        <p>존맛탱 감자조림</p>
+        <p className="userID">{userId}</p>
+        <p>{desc}</p>
       </div>
     );
   }

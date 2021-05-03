@@ -13,16 +13,19 @@ class Comments extends React.Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:3000/data/commentData.json', {
-      method: 'GET',
-    })
-      .then(res => res.json())
-      .then(data => {
-        this.setState({
-          commentArr: data,
-        });
-      });
+    this.setState({ commentArr: this.props.prevComment });
   }
+
+  addLike = e => {
+    const { commentArr } = this.state;
+
+    this.setState(prevState => {
+      console.log(prevState);
+      return {
+        isLiked: !prevState.isLiked,
+      };
+    });
+  };
 
   addComment = e => {
     e.preventDefault();
@@ -32,7 +35,7 @@ class Comments extends React.Component {
         ...commentArr,
         {
           id: commentArr.length + 1,
-          userName: 'wecode',
+          userName: '펭수',
           content: newComment,
           isLiked: false,
         },
@@ -43,11 +46,22 @@ class Comments extends React.Component {
 
   render() {
     const { commentArr, newComment, value } = this.state;
+    const { prevComment } = this.props;
     return (
       <div className="comments">
         <ul className="commentList">
+          {/* {prevComment.map(comment => (
+            <Comment
+              addLike={this.addLike}
+              key={comment.id}
+              userName={comment.userName}
+              content={comment.content}
+              isLiked={comment.isLiked}
+            />
+          ))} */}
           {commentArr.map(comment => (
             <Comment
+              addLike={this.addLike}
               key={comment.id}
               userName={comment.userName}
               content={comment.content}
