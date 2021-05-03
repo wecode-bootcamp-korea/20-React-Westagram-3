@@ -27,7 +27,7 @@ class Comments extends React.Component {
       <div className="comments">
         <ul className="commentList">
           {commentArr.map(text => (
-            <Comment key={new Date().getTime()} text={text} />
+            <Comment key={commentArr.length + 1} text={text} />
           ))}
         </ul>
         <form onSubmit={this.addComment}>
