@@ -1,4 +1,5 @@
 import React from 'react';
+import './FeedImg.scss';
 
 class FeedImg extends React.Component {
   render() {

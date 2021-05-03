@@ -1,4 +1,5 @@
 import React from 'react';
+import './FeedTop.scss';
 
 class FeedTop extends React.Component {
   render() {

@@ -5,7 +5,6 @@ import WhoLike from './WhoLike/WhoLike';
 import FeedImg from './FeedImg/FeedImg';
 import FeedComment from './FeedComment/FeedComment';
 import './Feeds.scss';
-import './FeedComment/FeedContent.scss';
 
 class Feeds extends React.Component {
   constructor() {
@@ -31,32 +30,50 @@ class Feeds extends React.Component {
   }
 
   addCommentBar = e => {
+    const { feedComment, value } = this.state;
     if (e.key === 'Enter') {
-      if (!e.target.value) {
+      if (!value) {
         return;
       }
 
-      this.setState({
-        feedComment: this.state.feedComment.concat(e.target.value),
-      });
-      e.target.value = '';
+      if (value) {
+        this.setState(
+          {
+            feedComment: feedComment.concat(value),
+          },
+          () => {
+            this.setState({
+              value: '',
+            });
+          }
+        );
+      }
     }
   };
 
   addCommentBtn = e => {
-    if (this.state.value) {
-      this.setState({
-        feedComment: this.state.feedComment.concat(this.state.value),
-      });
+    const { feedComment, value } = this.state;
+
+    if (value) {
+      this.setState(
+        {
+          feedComment: feedComment.concat(value),
+        },
+        () => {
+          this.setState({
+            value: '',
+          });
+        }
+      );
     }
   };
 
   changekey = e => {
-    this.state.value = e.target.value;
+    this.setState({ value: e.target.value });
   };
 
   render() {
-    const { feedTop, feedImg, feedContent, feedComment } = this.state;
+    const { feedTop, feedImg, feedContent, feedComment, value } = this.state;
 
     return (
       <ul className="feeds-page">
@@ -80,6 +97,7 @@ class Feeds extends React.Component {
                 className="feed__commentBar"
                 onKeyPress={this.addCommentBar}
                 onChange={this.changekey}
+                value={value}
               />
               <button
                 type="button"

@@ -1,4 +1,5 @@
 import React from 'react';
+import './FeedComment.scss';
 
 class FeedComment extends React.Component {
   render() {

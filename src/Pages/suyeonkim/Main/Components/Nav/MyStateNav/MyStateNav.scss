@@ -1,3 +1,5 @@
+@import '../../../../styles/common.scss';
+
 .profile__btn {
   position: relative;
   cursor: pointer;
@@ -9,8 +11,8 @@
   top: 50px;
   right: 20px;
   border-radius: 8px;
-  box-shadow: -10px 0px 13px -7px var(--dark-gray),
-    10px 0px 13px -7px var(--dark-gray), 5px 5px 15px 5px rgba(153, 153, 153, 0);
+  box-shadow: -10px 0px 13px -7px $--dark-gray, 10px 0px 13px -7px $--dark-gray,
+    5px 5px 15px 5px rgba(153, 153, 153, 0);
   background-color: white;
   z-index: 999;
 }
@@ -34,5 +36,5 @@
 
 .logOut__btn {
   padding: 25px 0 10px 25px;
-  border-top: 1px solid var(--border-line);
+  border-top: 1px solid $--border-line;
 }

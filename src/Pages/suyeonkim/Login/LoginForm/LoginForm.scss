@@ -9,11 +9,11 @@
     height: 40px;
     padding-left: 10px;
     font-size: 15px;
-    border: 1px solid var(--border-line);
-    background-color: var(--input-lignt-gray);
+    border: 1px solid $--border-line;
+    background-color: $--light-gray;
 
     &::placeholder {
-      color: var(--dark-gray);
+      color: $--dark-gray;
     }
   }
 
@@ -30,7 +30,7 @@
     font-size: 16px;
     line-height: 20px;
     color: white;
-    background-color: var(--button-blue);
+    background-color: $--button-blue;
     cursor: pointer;
     transition: all 0.3s ease;
 

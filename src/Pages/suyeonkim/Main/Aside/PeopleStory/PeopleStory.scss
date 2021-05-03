@@ -1,5 +1,7 @@
+@import '../../../styles/common.scss';
+
 .people__story {
   margin-top: 10px;
-  border: 1px solid var(--border-line);
+  border: 1px solid $--border-line;
   border-radius: 8px;
 }

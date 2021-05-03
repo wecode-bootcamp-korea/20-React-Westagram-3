@@ -13,8 +13,10 @@ class Login extends React.Component {
       pw: '',
     };
   }
+
   handleIdInput = e => {
     const tg = e.target;
+
     this.setState({
       [tg.name]: tg.value,
     });
