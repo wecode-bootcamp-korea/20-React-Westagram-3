@@ -9,10 +9,10 @@ class Comments extends React.Component {
     this.state = {
       commentArr: [],
       newCommemt: '',
-      empty: '',
+      value: '',
       defaultCms: [
-        { id: '도리', msg: '신기' },
-        { id: '노돌', msg: '하다' },
+        { id: 0, userId: '도리', msg: '신기' },
+        { id: 1, userId: '노돌', msg: '하다' },
       ],
     };
   }
@@ -25,17 +25,17 @@ class Comments extends React.Component {
       commentArr: newCommentArr,
     });
     this.setState({
-      empty: '',
+      value: '',
     });
   };
 
   render() {
-    const { commentArr, newComment, empty, defaultCms } = this.state;
+    const { commentArr, newComment, defaultCms, value } = this.state;
     return (
       <div className="comments">
         <ul className="commentList">
           {defaultCms.map(cm => (
-            <DefaultCm id={cm.id} msg={cm.msg} />
+            <DefaultCm key={cm.id} userId={cm.userId} msg={cm.msg} />
           ))}
           {commentArr.map(text => (
             <Comment text={text} />
@@ -45,9 +45,9 @@ class Comments extends React.Component {
           <input
             onChange={e => {
               this.setState({ newComment: e.target.value });
-              this.setState({ empty: e.target.value });
+              this.setState({ value: e.target.value });
             }}
-            value={empty}
+            value={value}
             className="commentInput"
             name="commentInput"
             method="post"
