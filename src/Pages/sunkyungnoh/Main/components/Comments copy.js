@@ -8,7 +8,7 @@ class Comments extends React.Component {
     super();
     this.state = {
       commentArr: [],
-      newComment: '',
+      newCommemt: '',
       value: '',
       defaultCms: [
         { id: 0, userId: '도리', msg: '신기' },
@@ -18,9 +18,12 @@ class Comments extends React.Component {
   }
 
   addComment = e => {
-    const { commentArr, newComment } = this.state;
     e.preventDefault();
-    commentArr.push(newComment);
+    let newCommentArr = [...this.state.commentArr];
+    newCommentArr.push(this.state.newComment);
+    this.setState({
+      commentArr: newCommentArr,
+    });
     this.setState({
       value: '',
     });
@@ -39,7 +42,7 @@ class Comments extends React.Component {
             />
           ))}
           {commentArr.map(text => (
-            <Comment key={new Date().getTime()} text={text} />
+            <Comment text={text} />
           ))}
         </ul>
         <form onSubmit={this.addComment}>
