@@ -10,7 +10,6 @@ import LoginSuyeonkim from './Pages/suyeonkim/Login/Login';
 import MainSuyeonkim from './Pages/suyeonkim/Main/Main';
 import LoginWonkeunchoi from './Pages/wonkeunchoi/Login/Login';
 import MainWonkeunchoi from './Pages/wonkeunchoi/Main/Main';
-import Test from './Pages/sunkyungnoh/test/Test';
 
 class Routes extends React.Component {
   render() {

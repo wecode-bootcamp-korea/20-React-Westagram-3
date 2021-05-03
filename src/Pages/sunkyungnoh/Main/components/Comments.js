@@ -1,19 +1,14 @@
 import React from 'react';
 import './Comments.scss';
 import Comment from './comment';
-import DefaultCm from './defaultCm';
 
 class Comments extends React.Component {
   constructor() {
     super();
     this.state = {
-      commentArr: [],
+      commentArr: ['안녕', '하세요'],
       newComment: '',
       value: '',
-      defaultCms: [
-        { id: 0, userId: '도리', msg: '신기' },
-        { id: 1, userId: '노돌', msg: '하다' },
-      ],
     };
   }
 
@@ -27,17 +22,10 @@ class Comments extends React.Component {
   };
 
   render() {
-    const { commentArr, newComment, defaultCms, value } = this.state;
+    const { commentArr, newComment, value } = this.state;
     return (
       <div className="comments">
         <ul className="commentList">
-          {defaultCms.map(comment => (
-            <DefaultCm
-              key={comment.id}
-              userId={comment.userId}
-              msg={comment.msg}
-            />
-          ))}
           {commentArr.map(text => (
             <Comment key={new Date().getTime()} text={text} />
           ))}
