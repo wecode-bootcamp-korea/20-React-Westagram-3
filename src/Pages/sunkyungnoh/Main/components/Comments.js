@@ -1,15 +1,22 @@
 import React from 'react';
 import './Comments.scss';
 import Comment from './comment';
+import COMMENT from './commentData';
 
 class Comments extends React.Component {
   constructor() {
     super();
     this.state = {
-      commentArr: ['안녕', '하세요'],
+      commentArr: [],
       newComment: '',
       value: '',
     };
+  }
+
+  componentDidMount() {
+    this.setState({
+      commentArr: COMMENT,
+    });
   }
 
   addComment = e => {
@@ -26,8 +33,13 @@ class Comments extends React.Component {
     return (
       <div className="comments">
         <ul className="commentList">
-          {commentArr.map(text => (
-            <Comment key={commentArr.length + 1} text={text} />
+          {commentArr.map(comment => (
+            <Comment
+              key={comment.id}
+              userName={comment.userName}
+              content={comment.content}
+              isLiked={comment.isLiked}
+            />
           ))}
         </ul>
         <form onSubmit={this.addComment}>
