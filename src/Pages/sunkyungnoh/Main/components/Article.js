@@ -8,7 +8,6 @@ import './Article.scss';
 class Article extends React.Component {
   render() {
     const { feed } = this.props;
-    console.log(feed.commentArr);
     return (
       <article>
         <Header userId={feed.userId} />

@@ -1,5 +1,4 @@
 import React from 'react';
-// import './PhotoInfo.scss';
 
 class PhotoInfo extends React.Component {
   render() {
