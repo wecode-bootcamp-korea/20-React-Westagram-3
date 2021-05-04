@@ -7,15 +7,16 @@
     .feedInfo {
       display: flex;
       justify-content: space-between;
+      height: 60px;
       padding: 5px;
 
       .feedProfilePhoto {
         display: flex;
-        justify-content: flex-start;
+        justify-content: flex-end;
+        width: 10%;
         padding: 3px;
 
         img {
-          width: 45px;
         }
       }
 

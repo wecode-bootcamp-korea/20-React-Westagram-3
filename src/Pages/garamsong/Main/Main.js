@@ -5,7 +5,7 @@ import FeedsBox from './components/FeedsBox';
 import RightBox from './components/RightBox';
 import './Main.scss';
 import './components/common.scss';
-import './components/reset.scss';
+// import './components/reset.scss';
 
 // import './Main.scss';
 // import ReactDOM from 'react-dom';
