@@ -92,11 +92,11 @@
   .loginOption > p::after {
     content: '';
     flex-grow: 1;
-    background: rgb(219, 219, 219);
     height: 1px;
+    margin-left: 18px;
+    background: rgb(219, 219, 219);
     font-size: 0px;
     line-height: 0px;
-    margin-left: 18px;
   }
 
   .facebook {
