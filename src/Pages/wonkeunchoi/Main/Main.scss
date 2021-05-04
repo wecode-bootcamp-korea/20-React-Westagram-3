@@ -80,14 +80,13 @@
     position: absolute;
     width: 21px;
     height: 16px;
-    margin-left: 67%;
+    margin-left: 64%;
   }
 
   .post_box {
     display: inline;
-    border: 1px solid darkgrey;
+
     width: 100%;
-    height: auto;
   }
 
   .post {
@@ -98,6 +97,7 @@
 
   .comment_storage {
     width: 90%;
+    height: 15%;
   }
 
   /* /----------------------------------- */
@@ -147,7 +147,7 @@
   }
 
   .right_layout .follow_box #user_recommend_font {
-    margin-right: 40%;
+    margin-right: 39%;
     font-size: 17px;
     color: #8e8e8e;
     font-weight: inherit;
@@ -156,6 +156,9 @@
   .follower_user_box {
     width: 100%;
     margin-top: 20px;
+  }
+  .follower_user_box ul {
+    padding: 0px;
   }
 
   .follower_user_box li {

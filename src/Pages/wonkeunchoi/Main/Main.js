@@ -3,8 +3,9 @@ import Section from './Components/Section/Section';
 import Nav from './Components/Nav/Nav';
 import './Main.scss';
 import './Components/Nav/Nav.scss';
-import './Styles/reset.scss';
+
 import './Styles/btn_font.scss';
+import './Styles/common.scss';
 //import PropTypes from 'prop-types';
 
 //import { Link } from 'react-router-dom';

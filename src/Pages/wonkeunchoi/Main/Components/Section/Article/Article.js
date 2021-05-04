@@ -1,6 +1,26 @@
 import React from 'react';
 
 class Article extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      newReple: '', // concat 사용.
+      comments: [{ text: '' }],
+    };
+  }
+  textChange = e => {
+    this.setState({ newReple: e.target.value });
+  };
+
+  buttonClick = () => {
+    let arr = this.state.comments;
+    arr = arr.concat({ text: this.state.newReply });
+
+    this.setState({ newReply: '', comments: arr });
+
+    console.log('클릭');
+  };
+
   render() {
     return (
       <article className="left_layout">
@@ -69,9 +89,20 @@ class Article extends React.Component {
                 type="text"
                 placeholder="댓글 달기.."
                 id="messageInputBox"
+                onChange={this.textChange}
               />
               <span>
-                <button type="submit" id="comment_btn">
+                {/* //! 화면에 뿌려주기. */}
+                <ul className="comment_storage">
+                  {this.state.box.map(el => (
+                    <li>{el.text}</li>
+                  ))}
+                </ul>
+                <button
+                  type="submit"
+                  id="comment_btn"
+                  onClick={this.buttonClick}
+                >
                   게시
                 </button>
               </span>
