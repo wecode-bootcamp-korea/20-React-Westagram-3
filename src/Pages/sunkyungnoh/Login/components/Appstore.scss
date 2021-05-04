@@ -16,9 +16,9 @@
   img {
     width: auto;
     height: 40px;
-  }
 
-  img:first-of-type {
-    margin-right: 8px;
+    &:first-of-type {
+      margin-right: 8px;
+    }
   }
 }
