@@ -1,4 +1,5 @@
 import React from 'react';
+import Comment from './Comment';
 
 class Article extends React.Component {
   constructor() {
@@ -14,9 +15,9 @@ class Article extends React.Component {
 
   buttonClick = () => {
     let arr = this.state.comments;
-    arr = arr.concat({ text: this.state.newReply });
+    arr = arr.concat({ text: this.state.newReple });
 
-    this.setState({ newReply: '', comments: arr });
+    this.setState({ newReple: '', comments: arr });
 
     console.log('클릭');
   };
@@ -80,6 +81,7 @@ class Article extends React.Component {
             </div>
             <div className="comment_storage">
               <div>
+                <Comment commentList={this.state.comments} />
                 <span className="comment_User"></span>
                 <span className="comment_Msg"></span>
               </div>
@@ -91,13 +93,10 @@ class Article extends React.Component {
                 id="messageInputBox"
                 onChange={this.textChange}
               />
+
+              {/* //! 화면에 뿌려주기. */}
+
               <span>
-                {/* //! 화면에 뿌려주기. */}
-                <ul className="comment_storage">
-                  {this.state.box.map(el => (
-                    <li>{el.text}</li>
-                  ))}
-                </ul>
                 <button
                   type="submit"
                   id="comment_btn"

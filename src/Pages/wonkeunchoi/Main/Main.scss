@@ -96,8 +96,13 @@
   }
 
   .comment_storage {
+    display: flex;
     width: 90%;
     height: 15%;
+  }
+
+  .comment_storage li {
+    margin-left: 20px;
   }
 
   /* /----------------------------------- */
