@@ -1,27 +1,27 @@
 const COMMENT = [
   {
     id: 1,
-    userName: 'garamsong',
-    content: 'hello',
-    isLiked: true,
+    userId: 'galmi.song',
+    content: 'himduroyo',
+    isLiked: '♡',
   },
   {
     id: 2,
-    userName: 'ahahah',
+    userId: 'ahahah',
     content: 'hello ah',
-    isLiked: true,
+    isLiked: '♡',
   },
   {
     id: 3,
-    userName: 'nananana',
+    userId: 'nananana',
     content: 'hello na',
-    isLiked: true,
+    isLiked: '♡',
   },
   {
     id: 4,
-    userName: 'dadadada',
+    userId: 'dadadada',
     content: 'hello da',
-    isLiked: true,
+    isLiked: '♡',
   },
 ];
 

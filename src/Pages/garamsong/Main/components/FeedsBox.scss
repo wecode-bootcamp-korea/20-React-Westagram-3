@@ -8,13 +8,11 @@
       display: flex;
       justify-content: space-between;
       padding: 5px;
-      border: 1px solid red;
 
       .feedProfilePhoto {
         display: flex;
         justify-content: flex-start;
         padding: 3px;
-        border: 1px solid red;
 
         img {
           width: 45px;
@@ -27,12 +25,10 @@
         align-items: center;
         width: 95%;
         padding: 5px;
-        border: 1px solid red;
 
         .feedInfoText {
           font-size: 0.7rem;
           color: #222;
-          border: 1px solid red;
 
           .feedUserName {
             margin-bottom: 5px;
@@ -46,7 +42,6 @@
         }
 
         .moreInfo {
-          border: 1px solid red;
           img {
             width: 30px;
             height: 20px;
@@ -68,7 +63,6 @@
       justify-content: space-between;
       padding: 5px;
       font-size: 1.2rem;
-      border: 1px solid red;
     }
 
     .replyCountLike {
@@ -76,7 +70,6 @@
       align-items: center;
       font-size: 0.7rem;
       height: 40px;
-      border: 1px solid red;
 
       img {
         height: 20px;
@@ -86,9 +79,9 @@
 
     .feedDescription {
       display: flex;
+      width: 100%;
       margin: 3px auto;
       font-size: 0.7rem;
-      border: 1px solid red;
 
       h4 {
         margin-right: 5px;
@@ -99,7 +92,6 @@
     .seeAllReply {
       margin: 3px auto;
       font-size: 0.7rem;
-      border: 1px solid red;
     }
 
     .replyValue {
@@ -109,7 +101,6 @@
       position: relative;
       width: 100%;
       margin-bottom: 3px;
-      border: 1px solid red;
 
       .userId {
         margin-right: 10px;

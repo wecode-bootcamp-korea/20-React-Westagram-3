@@ -2,41 +2,29 @@ import React from 'react';
 import './FeedsBox.scss';
 import Comment from './Comment';
 import AddComments from './AddComments';
+import commentData from './commentData';
+import COMMENT from './commentData';
 
 class FeedsBox extends React.Component {
   constructor() {
     super();
 
     this.state = {
-      commentList: [
-        {
-          id: 1,
-          userId: 'galmi.song',
-          content: 'himduroyo',
-          isLiked: '♡',
-        },
-        {
-          id: 2,
-          userId: 'ahahah',
-          content: 'hello ah',
-          isLiked: '♡',
-        },
-        {
-          id: 3,
-          userId: 'nananana',
-          content: 'hello na',
-          isLiked: '♡',
-        },
-        {
-          id: 4,
-          userId: 'dadadada',
-          content: 'hello da',
-          isLiked: '♡',
-        },
-      ],
-
+      commentList: [],
       newComment: '',
     };
+  }
+
+  componentDidMount() {
+    fetch('http://localhost:3000/data/commentData.json', {
+      method: 'GET',
+    })
+      .then(res => res.json())
+      .then(data => {
+        this.setState({
+          commentList: data,
+        });
+      });
   }
 
   addComment = e => {
@@ -105,9 +93,8 @@ class FeedsBox extends React.Component {
               <span>username님 외num명이 좋아합니다</span>
             </div>
             <div className="feedDescription">
-              <p>
-                <h4>galmi.song</h4>와 과연 나는 마무리를 할 수 있을까?
-              </p>
+              <h4>galmi.song</h4>
+              <p>와 과연 나는 마무리를 할 수 있을까?</p>
             </div>
             <p className="seeAllReply">댓글 num2개 모두 보기</p>
             <ul className="reply">
