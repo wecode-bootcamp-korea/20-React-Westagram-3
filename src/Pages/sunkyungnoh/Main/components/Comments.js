@@ -16,13 +16,6 @@ class Comments extends React.Component {
     this.setState({ commentArr: this.props.prevComment });
   }
 
-  setLike = e => {
-    console.log('clicked');
-    console.log(this.key);
-
-    this.setState();
-  };
-
   addComment = e => {
     e.preventDefault();
     const { commentArr, newComment } = this.state;
@@ -47,7 +40,6 @@ class Comments extends React.Component {
         <ul className="commentList">
           {commentArr.map(comment => (
             <Comment
-              setLike={this.setLike}
               key={comment.id}
               userName={comment.userName}
               content={comment.content}
