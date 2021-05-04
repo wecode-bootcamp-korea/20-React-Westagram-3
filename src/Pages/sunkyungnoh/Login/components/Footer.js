@@ -2,11 +2,35 @@ import React from 'react';
 import './Footer.scss';
 
 class Footer extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      footer: [],
+    };
+  }
+
+  componentDidMount() {
+    fetch('http://localhost:3000/data/footerData.json', {
+      method: 'GET',
+    })
+      .then(res => res.json())
+      .then(data => {
+        this.setState({
+          footer: data,
+        });
+      });
+  }
+
   render() {
+    const { footer } = this.state;
     return (
       <footer>
         <p>
-          <span>소개</span>
+          {footer.map(link => (
+            <span>{link}</span>
+          ))}
+
+          {/* <span>소개</span>
           <span>블로그</span>
           <span>채용</span>
           <span>정보</span>
@@ -17,7 +41,7 @@ class Footer extends React.Component {
           <span>인기</span>
           <span>계정</span>
           <span>해시태그</span>
-          <span>위치</span>
+          <span>위치</span> */}
         </p>
         <p>한국어 © 2021 Instagram from Facebook</p>
       </footer>
