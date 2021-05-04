@@ -2,8 +2,34 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import './Feed.scss';
 import '../../../../../Styles/seyongyun/common.scss';
+import Comment from '../comment/Comment';
 
 class Feed extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      commentList: [],
+      commentSlot: '',
+      commentIndex: 0,
+    };
+  }
+  handleChange = e => {
+    this.setState({
+      commentSlot: e.target.value,
+    });
+  };
+
+  commentInput = e => {
+    if (e.code === 'Enter') {
+      this.setState({
+        commentList: [...this.state.commentList, this.state.commentSlot],
+        commentIndex: this.state.commentIndex + 1,
+        commentSlot: '',
+      });
+    }
+    console.log(this.state.commentSlot);
+  };
+
   render() {
     return (
       <div className="feed feedArea">
@@ -67,10 +93,24 @@ class Feed extends React.Component {
               className="replyInput"
               type="text"
               placeholder="댓글달기..."
+              value={this.state.commentSlot}
+              onChange={this.handleChange}
+              onKeyPress={this.commentInput}
             />
-            <button className="replyButton">게시</button>
+            <button className="replyButton" onClick={this.commentWrite}>
+              게시
+            </button>
           </div>
-          <div className="replyLocation"></div>
+          <div className="replyLocation">
+            <ol className="replyList">
+              {this.state.commentList.map(text => (
+                <Comment
+                  textContainer={text}
+                  indexContainer={this.state.commentIndex}
+                />
+              ))}
+            </ol>
+          </div>
         </article>
       </div>
     );

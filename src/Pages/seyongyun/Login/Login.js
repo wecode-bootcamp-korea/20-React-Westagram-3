@@ -8,6 +8,8 @@ class LoginSeyongyun extends React.Component {
     super();
     this.state = {
       id: 'none',
+      pw: 'none',
+      backgroundColor: 'rgb(175, 217, 245)',
     };
   }
 
@@ -21,7 +23,23 @@ class LoginSeyongyun extends React.Component {
     });
   };
 
+  handlePwInput = e => {
+    this.setState({
+      pw: e.target.value,
+    });
+  };
+
+  // 무한루프 돈다?
+  // changeColor = () => {
+  //   const { id, pw } = this.state;
+  //   id.includes('@') && pw.length > 5
+  //     ? this.setState({ backgroundColor: 'blue' })
+  //     : this.setState({ backgroundColor: 'rgb(175, 217, 245)' });
+  // };
+
   render() {
+    const { id, pw } = this.state;
+
     return (
       <div className="login">
         <div className="totalBoundary">
@@ -34,17 +52,27 @@ class LoginSeyongyun extends React.Component {
                 placeholder="전화번호,사용자 이름 또는 이메일"
                 onChange={this.handleIdInput}
               />
-              {console.log(this.state.id)}
             </p>
             <p>
               <input
                 className="passwordInput"
                 type="password"
                 placeholder="비밀번호"
+                onChange={this.handlePwInput}
               />
+              {console.log(id, pw)}
             </p>
             <div className="buttonArea">
-              <button className="loginButton" onClick={this.goToMain}>
+              <button
+                className="loginButton"
+                style={{
+                  backgroundColor:
+                    id.includes('@') && pw.length > 5
+                      ? 'blue'
+                      : 'rgb(175, 217, 245)',
+                }}
+                onClick={this.goToMain}
+              >
                 로그인
               </button>
             </div>
