@@ -38,6 +38,9 @@ button {
   border: none;
   background-color: inherit;
 }
+li {
+  list-style: none;
+}
 @media (max-width: 1190px) {
   .aside__links {
     display: none;
