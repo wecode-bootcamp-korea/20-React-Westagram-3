@@ -5,7 +5,7 @@ class FeedComment extends React.Component {
   render() {
     const { commentLi } = this.props;
 
-    const list = commentLi.map((el, index) => (
+    const list = commentLi.map(el => (
       <li className="feed__comments__list" key={el.id}>
         <span>{el.userName}</span>
         <p className="feed__comments__contents">{el.content}</p>
