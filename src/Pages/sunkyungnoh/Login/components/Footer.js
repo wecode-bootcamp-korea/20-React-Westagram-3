@@ -10,13 +10,13 @@ class Footer extends React.Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:3000/data/footerData.json', {
+    fetch('http://localhost:3000/data/sunkyungnoh/footerData.json', {
       method: 'GET',
     })
       .then(res => res.json())
-      .then(data => {
+      .then(footerData => {
         this.setState({
-          footer: data,
+          footer: footerData,
         });
       });
   }
@@ -27,21 +27,8 @@ class Footer extends React.Component {
       <footer>
         <p>
           {footer.map(link => (
-            <span>{link}</span>
+            <span key={link.id}>{link.content}</span>
           ))}
-
-          {/* <span>소개</span>
-          <span>블로그</span>
-          <span>채용</span>
-          <span>정보</span>
-          <span>도움말</span>
-          <span>API</span>
-          <span>개인정보처리방침</span>
-          <span>약관</span>
-          <span>인기</span>
-          <span>계정</span>
-          <span>해시태그</span>
-          <span>위치</span> */}
         </p>
         <p>한국어 © 2021 Instagram from Facebook</p>
       </footer>
