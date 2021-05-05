@@ -10,15 +10,11 @@ class LoginForm extends React.Component {
     };
   }
 
-  handleIdInput = e => {
+  handleInput = e => {
+    const { value, name } = e.target;
+    console.log(value, name);
     this.setState({
-      username: e.target.value,
-    });
-  };
-
-  handlePwInput = e => {
-    this.setState({
-      password: e.target.value,
+      [name]: value,
     });
   };
 
@@ -27,7 +23,11 @@ class LoginForm extends React.Component {
     const isValid = username.includes('@') && password.length >= 6;
 
     return (
-      <form className="loginForm" action="/Main-sunkyungnoh">
+      <form
+        onChange={this.handleInput}
+        className="loginForm"
+        action="/Main-sunkyungnoh"
+      >
         <div className="enter">
           <label
             htmlFor="id"
@@ -37,11 +37,10 @@ class LoginForm extends React.Component {
           </label>
           <input
             value={username}
-            onChange={this.handleIdInput}
             className={`input pw ${username ? 'entered' : ''}`}
             type="text"
             aria-label="전화번호, 사용자 이름 또는 이메일"
-            name="userName"
+            name="username"
             id="id"
             required
           />
@@ -55,10 +54,9 @@ class LoginForm extends React.Component {
           </label>
           <input
             value={password}
-            onChange={this.handlePwInput}
             className={`input pw ${password ? 'entered' : ''}`}
             id="pw"
-            name="pw"
+            name="password"
             type="password"
             aria-label="비밀번호"
             required
