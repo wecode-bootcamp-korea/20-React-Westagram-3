@@ -45,7 +45,6 @@ class Feed extends React.Component {
       }),
       inputComment: '',
     });
-    console.log(list);
   };
 
   temValue = e => {
