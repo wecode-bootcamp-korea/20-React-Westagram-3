@@ -16,9 +16,9 @@ class Feeds extends React.Component {
       method: 'GET',
     })
       .then(res => res.json())
-      .then(data => {
+      .then(feedData => {
         this.setState({
-          feeds: data,
+          feeds: feedData,
         });
       });
   }

@@ -3,14 +3,12 @@ import { Link, withRouter } from 'react-router-dom';
 import './Nav.scss';
 
 class Nav extends React.Component {
-  // constructor() {
-  //   super();
-  //   this.state = {
-  //     searchInput: '',
-  //   };
-  // }
   goToLogin = () => {
     this.props.history.push('/Login-sunkyungnoh');
+  };
+
+  initSearchInput = e => {
+    e.target.value = '';
   };
 
   render() {
@@ -21,12 +19,7 @@ class Nav extends React.Component {
           src="https://www.instagram.com/static/images/web/mobile_nav_type_logo-2x.png/1b47f9d0e595.png"
           onClick={this.goToLogin}
         />
-        <div
-          onBlur={e => {
-            e.target.value = '';
-          }}
-          className="searchBar"
-        >
+        <div onBlur={this.initSearchInput} className="searchBar">
           <input type="text" name="search" id="search" placeholder="검색" />
           <label className="search" htmlFor="search">
             <img alt="search icon" src="/images/sunkyungnoh/dm.png" />
