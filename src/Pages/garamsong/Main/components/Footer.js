@@ -4,7 +4,7 @@ import './Footer.scss';
 class Footer extends React.Component {
   render() {
     return (
-      <footer className="FooterGaramsong">
+      <footer className="footerGaramsong">
         <ul className="footerText">
           <li>
             <a href="#">소개·</a>

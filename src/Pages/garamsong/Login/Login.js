@@ -14,15 +14,10 @@ class Login extends React.Component {
     };
   }
 
-  handleIdInput = e => {
+  handleInput = e => {
+    const { name, value } = e.target;
     this.setState({
-      id: e.target.value,
-    });
-  };
-
-  handlePwInput = e => {
-    this.setState({
-      pw: e.target.value,
+      [name]: value,
     });
   };
 
@@ -30,7 +25,7 @@ class Login extends React.Component {
     const { id, pw } = this.state;
     const isValid = id.includes('@') && pw.length >= 6;
     return (
-      <div className="LoginGaramsong">
+      <div className="loginGaramsong">
         <section className="loginContainer">
           <div className="loginLogoContainer">
             <h1 className="loginLogo">Westagram</h1>
@@ -41,19 +36,20 @@ class Login extends React.Component {
               className="loginValue loginInputValue loginId"
               type="text"
               placeholder="전화번호, 사용자이름 또는 이메일"
-              onChange={this.handleIdInput}
+              onChange={this.handleInput}
+              name="id"
             />
             <input
               aria-label="type PW here"
               className="loginValue loginInputValue loginPassword"
               type="password"
               placeholder="비밀번호"
-              onChange={this.handlePwInput}
+              onChange={this.handleInput}
+              name="pw"
             />
             <button
               className={`loginValue loginBtn ${isValid ? 'btnActive' : ''}`}
-              onClick={this.goToMain}
-              disabled={isValid ? false : true}
+              disabled={!isValid}
             >
               로그인
             </button>

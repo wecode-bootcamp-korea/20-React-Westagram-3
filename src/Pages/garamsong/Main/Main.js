@@ -4,16 +4,11 @@ import StoryBox from './components/StoryBox';
 import FeedsBox from './components/FeedsBox';
 import RightBox from './components/RightBox';
 import './Main.scss';
-import './components/common.scss';
-// import './components/reset.scss';
-
-// import './Main.scss';
-// import ReactDOM from 'react-dom';
 
 class Main extends React.Component {
   render() {
     return (
-      <div className="MainGaramsong">
+      <div className="mainGaramsong">
         <Nav />
         <main>
           <section className="contentsBox">

@@ -1,9 +1,7 @@
 import React from 'react';
-import './FeedsBox.scss';
 import Comment from './Comment';
 import AddComments from './AddComments';
-import commentData from './commentData';
-import COMMENT from './commentData';
+import './FeedsBox.scss';
 
 class FeedsBox extends React.Component {
   constructor() {
@@ -16,13 +14,13 @@ class FeedsBox extends React.Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:3000/data/commentData.json', {
+    fetch('http://localhost:3000/data/garamsong/commentData.json', {
       method: 'GET',
     })
       .then(res => res.json())
-      .then(data => {
+      .then(comments => {
         this.setState({
-          commentList: data,
+          commentList: comments,
         });
       });
   }
@@ -48,9 +46,8 @@ class FeedsBox extends React.Component {
 
   render() {
     const { commentList } = this.state;
-    console.log(commentList);
     return (
-      <div className="FeedsBoxGaramsong">
+      <div className="feedsBoxGaramsong">
         <article className="feed">
           <header className="feedInfo">
             <div className="feedProfilePhoto">

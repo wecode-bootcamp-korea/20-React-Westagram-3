@@ -5,7 +5,7 @@ import './RightBox.scss';
 class RightBox extends React.Component {
   render() {
     return (
-      <aside className="RightBoxGaramsong">
+      <aside className="rightBoxGaramsong">
         <div className="myProfileBox">
           <div className="profilePhoto">
             <img

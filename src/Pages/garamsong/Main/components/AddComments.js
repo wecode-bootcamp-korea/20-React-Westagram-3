@@ -10,18 +10,14 @@ class AddComments extends React.Component {
   }
 
   inputComment = e => {
-    // this.setState({
-    //   comment: e.target.value,
-    // });
-    this.props.getComment(e.target.value);
-
-    console.log(e.target.value);
+    const { getComment } = this.props;
+    getComment(e.target.value);
   };
 
   render() {
     const { addComment } = this.props;
     return (
-      <form className="replyBar" onSubmit={addComment}>
+      <form className="addComments" onSubmit={addComment}>
         <input type="text" className="typeBar" onChange={this.inputComment} />
         <button type="submit" className="change post">
           게시

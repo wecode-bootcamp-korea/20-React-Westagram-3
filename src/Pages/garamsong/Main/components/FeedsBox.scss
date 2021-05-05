@@ -1,4 +1,4 @@
-.FeedsBoxGaramsong {
+.feedsBoxGaramsong {
   background-color: #fff;
   border: 1px solid #dbdbdb;
   border-radius: 3px;
@@ -92,7 +92,7 @@
       font-size: 0.7rem;
     }
 
-    .replyValue {
+    .comment {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
@@ -118,7 +118,7 @@
       color: rgba(50, 50, 50, 0.5);
     }
 
-    .replyBar {
+    .addComments {
       display: flex;
       justify-content: space-between;
       align-items: center;
