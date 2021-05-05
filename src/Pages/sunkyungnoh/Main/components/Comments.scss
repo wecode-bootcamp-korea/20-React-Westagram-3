@@ -1,6 +1,7 @@
 ul {
   padding: 16px 16px 0;
   font-size: 14px;
+  margin: 0;
 
   li {
     display: flex;
@@ -10,13 +11,13 @@ ul {
 
     span {
       margin-right: 4px;
-      width: 10%;
+      width: 14%;
     }
     div {
-      width: 85%;
+      width: 82%;
     }
     button {
-      width: 5%;
+      width: 4%;
     }
     img {
       width: 14px;
