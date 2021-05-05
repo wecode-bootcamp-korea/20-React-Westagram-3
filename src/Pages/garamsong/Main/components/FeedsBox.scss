@@ -1,9 +1,10 @@
 .feedsBoxGaramsong {
-  background-color: #fff;
-  border: 1px solid #dbdbdb;
-  border-radius: 3px;
-
   .feed {
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    margin: 30px auto;
+
     .feedInfo {
       display: flex;
       justify-content: space-between;
@@ -56,95 +57,109 @@
       }
     }
 
-    .replyIcons {
-      display: flex;
-      justify-content: space-between;
-      padding: 5px;
-      font-size: 1.2rem;
-    }
+    .replyContainer {
+      padding: 5px 15px;
 
-    .replyCountLike {
-      display: flex;
-      align-items: center;
-      font-size: 0.7rem;
-      height: 40px;
-
-      img {
-        height: 20px;
-        margin-right: 3px;
-      }
-    }
-
-    .feedDescription {
-      display: flex;
-      width: 100%;
-      margin: 3px auto;
-      font-size: 0.7rem;
-
-      h4 {
-        margin-right: 5px;
-        font-weight: bold;
-      }
-    }
-
-    .seeAllReply {
-      margin: 3px auto;
-      font-size: 0.7rem;
-    }
-
-    .comment {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      position: relative;
-      width: 100%;
-      margin-bottom: 3px;
-
-      .userId {
-        margin-right: 10px;
-        font-weight: bold;
+      .replyIcons {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px;
+        font-size: 1.2rem;
       }
 
-      .like {
-        position: absolute;
-        right: 10px;
-        background: none;
-        border: none;
-        font-size: 0.6rem;
-      }
-    }
+      .replyCountLike {
+        display: flex;
+        align-items: center;
+        font-size: 0.7rem;
+        height: 40px;
 
-    .date {
-      color: rgba(50, 50, 50, 0.5);
-    }
-
-    .addComments {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin: 5px 0;
-      padding: 5px;
-      border-top: 1px solid #000;
-
-      .emoji {
-        font-size: 2rem;
-      }
-
-      .typeBar {
-        width: 80%;
-        height: 30px;
-        background-color: transparent;
-        border: none;
-        resize: none;
-
-        &:focus {
-          outline: none;
+        img {
+          height: 20px;
+          margin-right: 3px;
         }
       }
 
-      .post {
-        width: 15%;
-        background: transparent;
+      .feedDescription {
+        display: flex;
+        width: 100%;
+        margin: 3px auto;
+        font-size: 0.7rem;
+
+        h4 {
+          margin-right: 5px;
+          font-weight: bold;
+        }
+      }
+
+      .seeAllReply {
+        margin: 3px auto;
+        font-size: 0.7rem;
+      }
+      .reply {
+        margin: 0;
+        padding: 0;
+        line-height: 1em;
+
+        .comment {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          position: relative;
+          width: 100%;
+          margin-bottom: 3px;
+
+          .userId {
+            margin-right: 10px;
+            font-weight: bold;
+          }
+
+          .replyText {
+            margin: 0;
+            padding: 0;
+          }
+
+          .like {
+            position: absolute;
+            right: 10px;
+            background: none;
+            border: none;
+            font-size: 0.6rem;
+          }
+        }
+      }
+
+      .date {
+        color: rgba(50, 50, 50, 0.5);
+      }
+
+      .addComments {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 5px 0;
+        padding: 5px;
+        border-top: 1px solid #000;
+
+        .emoji {
+          font-size: 2rem;
+        }
+
+        .typeBar {
+          width: 80%;
+          height: 30px;
+          background-color: transparent;
+          border: none;
+          resize: none;
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        .post {
+          width: 15%;
+          background: transparent;
+        }
       }
     }
   }

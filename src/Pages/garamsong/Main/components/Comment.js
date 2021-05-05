@@ -2,7 +2,6 @@ import React from 'react';
 
 class Comment extends React.Component {
   render() {
-    // const { text } = this.props;
     const { userId, content, isLiked } = this.props;
     return (
       <li className="comment">

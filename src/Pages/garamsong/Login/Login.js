@@ -3,9 +3,6 @@ import { withRouter } from 'react-router-dom';
 import './Login.scss';
 
 class Login extends React.Component {
-  // goToMain = () => {
-  //   this.props.history.push('./Main-garamsong');
-  // };
   constructor() {
     super();
     this.state = {

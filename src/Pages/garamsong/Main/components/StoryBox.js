@@ -2,89 +2,42 @@ import React from 'react';
 import './StoryBox.scss';
 
 class StoryBox extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
+      stories: [],
+    };
+  }
+  componentDidMount() {
+    fetch('http://localhost:3000/data/garamsong/storyData.json', {
+      method: 'GET',
+    })
+      .then(res => res.json())
+      .then(story => {
+        this.setState({
+          stories: story,
+        });
+      });
+  }
   render() {
+    const { stories } = this.state;
     return (
       <ul className="storyBoxGaramsong">
-        <li className="eachStory">
-          <div className="storyImgBox">
-            <img
-              alt="profile"
-              className="profileImgRadius storyImg"
-              src="https://instagram.ficn1-1.fna.fbcdn.net/v/t51.2885-19/s150x150/22711069_317709135365037_7962356006522978304_n.jpg?tp=1&_nc_ht=instagram.ficn1-1.fna.fbcdn.net&_nc_ohc=jo6OZE7d6KEAX9PfsAO&edm=AIQHJ4wAAAAA&ccb=7-4&oh=7a1c9fed4ff9e5efe53ee0bab6485dbb&oe=60A59B41&_nc_sid=7b02f1"
-            />
-          </div>
-          <p>user_name</p>
-        </li>
-        <li className="eachStory">
-          <div className="storyImgBox">
-            <img
-              alt="profile"
-              className="profileImgRadius storyImg"
-              src="https://instagram.ficn1-1.fna.fbcdn.net/v/t51.2885-19/s150x150/22711069_317709135365037_7962356006522978304_n.jpg?tp=1&_nc_ht=instagram.ficn1-1.fna.fbcdn.net&_nc_ohc=jo6OZE7d6KEAX9PfsAO&edm=AIQHJ4wAAAAA&ccb=7-4&oh=7a1c9fed4ff9e5efe53ee0bab6485dbb&oe=60A59B41&_nc_sid=7b02f1"
-            />
-          </div>
-          <p>user_name</p>
-        </li>
-        <li className="eachStory">
-          <div className="storyImgBox">
-            <img
-              alt="profile"
-              className="profileImgRadius storyImg"
-              src="https://instagram.ficn1-1.fna.fbcdn.net/v/t51.2885-19/s150x150/22711069_317709135365037_7962356006522978304_n.jpg?tp=1&_nc_ht=instagram.ficn1-1.fna.fbcdn.net&_nc_ohc=jo6OZE7d6KEAX9PfsAO&edm=AIQHJ4wAAAAA&ccb=7-4&oh=7a1c9fed4ff9e5efe53ee0bab6485dbb&oe=60A59B41&_nc_sid=7b02f1"
-            />
-          </div>
-          <p>user_name</p>
-        </li>
-        <li className="eachStory">
-          <div className="storyImgBox">
-            <img
-              alt="profile"
-              className="profileImgRadius storyImg"
-              src="https://instagram.ficn1-1.fna.fbcdn.net/v/t51.2885-19/s150x150/22711069_317709135365037_7962356006522978304_n.jpg?tp=1&_nc_ht=instagram.ficn1-1.fna.fbcdn.net&_nc_ohc=jo6OZE7d6KEAX9PfsAO&edm=AIQHJ4wAAAAA&ccb=7-4&oh=7a1c9fed4ff9e5efe53ee0bab6485dbb&oe=60A59B41&_nc_sid=7b02f1"
-            />
-          </div>
-          <p>user_name</p>
-        </li>
-        <li className="eachStory">
-          <div className="storyImgBox">
-            <img
-              alt="profile"
-              className="profileImgRadius storyImg"
-              src="https://instagram.ficn1-1.fna.fbcdn.net/v/t51.2885-19/s150x150/22711069_317709135365037_7962356006522978304_n.jpg?tp=1&_nc_ht=instagram.ficn1-1.fna.fbcdn.net&_nc_ohc=jo6OZE7d6KEAX9PfsAO&edm=AIQHJ4wAAAAA&ccb=7-4&oh=7a1c9fed4ff9e5efe53ee0bab6485dbb&oe=60A59B41&_nc_sid=7b02f1"
-            />
-          </div>
-          <p>user_name</p>
-        </li>
-        <li className="eachStory">
-          <div className="storyImgBox">
-            <img
-              alt="profile"
-              className="profileImgRadius storyImg"
-              src="https://instagram.ficn1-1.fna.fbcdn.net/v/t51.2885-19/s150x150/22711069_317709135365037_7962356006522978304_n.jpg?tp=1&_nc_ht=instagram.ficn1-1.fna.fbcdn.net&_nc_ohc=jo6OZE7d6KEAX9PfsAO&edm=AIQHJ4wAAAAA&ccb=7-4&oh=7a1c9fed4ff9e5efe53ee0bab6485dbb&oe=60A59B41&_nc_sid=7b02f1"
-            />
-          </div>
-          <p>user_name</p>
-        </li>
-        <li className="eachStory">
-          <div className="storyImgBox">
-            <img
-              alt="profile"
-              className="profileImgRadius storyImg"
-              src="https://instagram.ficn1-1.fna.fbcdn.net/v/t51.2885-19/s150x150/22711069_317709135365037_7962356006522978304_n.jpg?tp=1&_nc_ht=instagram.ficn1-1.fna.fbcdn.net&_nc_ohc=jo6OZE7d6KEAX9PfsAO&edm=AIQHJ4wAAAAA&ccb=7-4&oh=7a1c9fed4ff9e5efe53ee0bab6485dbb&oe=60A59B41&_nc_sid=7b02f1"
-            />
-          </div>
-          <p>user_name</p>
-        </li>
-        <li className="eachStory">
-          <div className="storyImgBox">
-            <img
-              alt="profile"
-              className="profileImgRadius storyImg"
-              src="https://instagram.ficn1-1.fna.fbcdn.net/v/t51.2885-19/s150x150/22711069_317709135365037_7962356006522978304_n.jpg?tp=1&_nc_ht=instagram.ficn1-1.fna.fbcdn.net&_nc_ohc=jo6OZE7d6KEAX9PfsAO&edm=AIQHJ4wAAAAA&ccb=7-4&oh=7a1c9fed4ff9e5efe53ee0bab6485dbb&oe=60A59B41&_nc_sid=7b02f1"
-            />
-          </div>
-          <p>user_name</p>
-        </li>
+        {stories.map(story => {
+          return (
+            <li className="eachStory">
+              <div className="storyImgBox">
+                <img
+                  alt="profile"
+                  className="profileImgRadius storyImg"
+                  src={story.imgUrl}
+                />
+              </div>
+              <p>{story.userName}</p>
+            </li>
+          );
+        })}
       </ul>
     );
   }
