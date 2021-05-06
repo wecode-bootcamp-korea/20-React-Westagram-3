@@ -15,7 +15,7 @@ class Login extends React.Component {
 
   handleIdInput = e => {
     const inputTarget = e.target;
-
+    e.preventDefault();
     this.setState({
       [inputTarget.name]: inputTarget.value,
     });

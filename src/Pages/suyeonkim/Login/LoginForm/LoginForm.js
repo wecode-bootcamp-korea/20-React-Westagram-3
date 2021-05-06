@@ -4,7 +4,29 @@ import './LoginForm.scss';
 
 class LoginForm extends React.Component {
   goToMain = () => {
-    this.props.history.push('/Main-suyeonkim');
+    const { id, pw } = this.props;
+
+    fetch('http://10.58.0.184:8000/user/signin', {
+      method: 'POST',
+      body: JSON.stringify({
+        phonenumber: '123 - 456 - 789',
+        email: id,
+        nickname: 'suyeon',
+        password: pw,
+      }),
+    })
+      .then(response => response.json())
+      .then(result => {
+        if (result.token) {
+          localStorage.setItem('token', result.token);
+        }
+
+        if (result.MESSAGE === 'SUCCESS') {
+          this.props.history.push('/Main-suyeonkim');
+        } else {
+          alert('You should signUp');
+        }
+      });
   };
 
   render() {
@@ -12,7 +34,11 @@ class LoginForm extends React.Component {
     const changeValue = id.includes('@') && pw.length > 5;
 
     return (
-      <form className="loginForm" onSubmit={setValueInState}>
+      <form
+        className="loginForm"
+        onSubmit={setValueInState}
+        onSubmit={this.goToMain}
+      >
         <input
           type="text"
           placeholder="전화번호, 사용자 이름 또는 이메일"
@@ -25,7 +51,7 @@ class LoginForm extends React.Component {
           onChange={setValueInState}
           name="pw"
         />
-        <button type="button" onClick={this.goToMain} disabled={!changeValue}>
+        <button type="button" disabled={!changeValue}>
           로그인
         </button>
       </form>
