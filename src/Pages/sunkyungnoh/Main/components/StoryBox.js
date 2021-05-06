@@ -3,18 +3,32 @@ import Story from './Story';
 import './StoryBox.scss';
 
 class StoryBox extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      storyInfo: [],
+    };
+  }
+
+  componentDidMount() {
+    fetch('http://localhost:3000/data/sunkyungnoh/storyData.json', {
+      method: 'GET',
+    })
+      .then(res => res.json())
+      .then(storyData => {
+        this.setState({
+          storyInfo: storyData,
+        });
+      });
+  }
+
   render() {
+    const { storyInfo } = this.state;
     return (
       <ul className="storyBox">
-        <Story />
-        <Story />
-        <Story />
-        <Story />
-        <Story />
-        <Story />
-        <Story />
-        <Story />
-        <Story />
+        {storyInfo.map(story => (
+          <Story key={story.userName} storyInfo={story.userName} />
+        ))}
       </ul>
     );
   }
