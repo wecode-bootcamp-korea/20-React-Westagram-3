@@ -18,18 +18,21 @@ class Aside extends React.Component {
       },
       StoryInfo: [
         {
+          id: 1,
           name: 'daybeat_',
           time: '7분 전',
           image:
             'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-19/s150x150/129741778_216837503231079_6685225582053225698_n.jpg?tp=1&_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_ohc=OsXOshCpdBAAX_-MWzw&edm=AAeKFY8AAAAA&ccb=7-4&oh=596148d14220aba2f5bf68fa87228ad5&oe=60A318BA&_nc_sid=c982ba',
         },
         {
+          id: 2,
           name: 'syeon_',
           time: '77분 전',
           image:
             'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-19/s150x150/129741778_216837503231079_6685225582053225698_n.jpg?tp=1&_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_ohc=OsXOshCpdBAAX_-MWzw&edm=AAeKFY8AAAAA&ccb=7-4&oh=596148d14220aba2f5bf68fa87228ad5&oe=60A318BA&_nc_sid=c982ba',
         },
         {
+          id: 3,
           name: 'wecode',
           time: '하루 전',
           image:
@@ -38,12 +41,14 @@ class Aside extends React.Component {
       ],
       RecoPeople: [
         {
+          id: 1,
           name: 'put_official_',
           detail: '회원을 위한 추천',
           image:
             'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-19/s150x150/129741778_216837503231079_6685225582053225698_n.jpg?tp=1&_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_ohc=OsXOshCpdBAAX_-MWzw&edm=AAeKFY8AAAAA&ccb=7-4&oh=596148d14220aba2f5bf68fa87228ad5&oe=60A318BA&_nc_sid=c982ba',
         },
         {
+          id: 2,
           name: 'Recomend me',
           detial: '나를 팔로우해줭 힝',
           image:

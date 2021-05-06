@@ -14,10 +14,10 @@ class Login extends React.Component {
   }
 
   handleIdInput = e => {
-    const tg = e.target;
+    const inputTarget = e.target;
 
     this.setState({
-      [tg.name]: tg.value,
+      [inputTarget.name]: inputTarget.value,
     });
   };
 
@@ -28,7 +28,7 @@ class Login extends React.Component {
       <div className="login_suyeonkim">
         <div>
           <h1>Westagram</h1>
-          <LoginForm id={id} pw={pw} InputFunction={this.handleIdInput} />
+          <LoginForm id={id} pw={pw} setValueInState={this.handleIdInput} />
           <ForgotPassword />
         </div>
       </div>

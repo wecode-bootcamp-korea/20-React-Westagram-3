@@ -8,27 +8,24 @@ class LoginForm extends React.Component {
   };
 
   render() {
-    const { id, pw, InputFunction } = this.props;
+    const { id, pw, setValueInState } = this.props;
+    const changeValue = id.includes('@') && pw.length > 5;
 
     return (
-      <form className="loginForm" onSubmit={InputFunction}>
+      <form className="loginForm" onSubmit={setValueInState}>
         <input
           type="text"
           placeholder="전화번호, 사용자 이름 또는 이메일"
-          onChange={InputFunction}
+          onChange={setValueInState}
           name="id"
         />
         <input
           type="password"
           placeholder="비밀번호"
-          onChange={InputFunction}
+          onChange={setValueInState}
           name="pw"
         />
-        <button
-          type="button"
-          onClick={this.goToMain}
-          disabled={id.includes('@') && pw.length > 5 ? false : true}
-        >
+        <button type="button" onClick={this.goToMain} disabled={!changeValue}>
           로그인
         </button>
       </form>

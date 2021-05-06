@@ -16,16 +16,16 @@ class Feeds extends React.Component {
       method: 'GET',
     })
       .then(res => res.json())
-      .then(data => {
+      .then(feedInfo => {
         this.setState({
-          feeds: data,
+          feeds: feedInfo,
         });
       });
   }
   render() {
     const { feeds } = this.state;
 
-    const list = feeds.map((feedData, index) => (
+    const list = feeds.map(feedData => (
       <Feed feedInfo={feedData} key={feedData.feedId} />
     ));
 
