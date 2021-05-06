@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import './LoginForm.scss';
 
 class LoginForm extends React.Component {
@@ -17,15 +18,37 @@ class LoginForm extends React.Component {
     });
   };
 
+  submit = e => {
+    e.preventDefault();
+    fetch('http://10.58.6.172:8000/user/login', {
+      method: 'POST',
+      body: JSON.stringify({
+        email: this.state.username,
+        password: this.state.password,
+      }),
+    })
+      .then(response => response.json())
+      .then(result => {
+        console.log(result);
+        if (result.message === 'success') {
+          localStorage.setItem('token', result.token);
+          this.props.history.push('/Main-sunkyungnoh');
+        } else {
+          alert('비밀번호를 다시 확인해주세요');
+        }
+      });
+  };
+
   render() {
     const { username, password } = this.state;
     const isValid = username.includes('@') && password.length >= 6;
 
     return (
       <form
+        onSubmit={this.submit}
         onChange={this.handleInput}
         className="loginForm"
-        action="/Main-sunkyungnoh"
+        // action="/Main-sunkyungnoh"
       >
         <div className="enter">
           <label
@@ -85,4 +108,4 @@ class LoginForm extends React.Component {
   }
 }
 
-export default LoginForm;
+export default withRouter(LoginForm);
