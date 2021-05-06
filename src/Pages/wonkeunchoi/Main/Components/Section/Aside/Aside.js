@@ -8,7 +8,7 @@ class Aside extends React.Component {
           <div className="follow_myInfo">
             <img
               src="/images/wonkeunchoi/feed_profile.jpeg"
-              alt=""
+              alt="feed_profile_img"
               id="side_profile"
             />
             <div id="myName_box">
@@ -25,7 +25,7 @@ class Aside extends React.Component {
                 <li>
                   <img
                     src="/images/wonkeunchoi/profile.jpeg"
-                    alt=""
+                    alt="profile_img"
                     className="follower_img"
                   />
                   <div className="follwer_storage">
@@ -40,7 +40,7 @@ class Aside extends React.Component {
                 <li>
                   <img
                     src="/images/wonkeunchoi/profile.jpeg"
-                    alt=""
+                    alt="profile_img"
                     className="follower_img"
                   />
                   <div className="follwer_storage">
@@ -55,7 +55,7 @@ class Aside extends React.Component {
                 <li>
                   <img
                     src="/images/wonkeunchoi/profile.jpeg"
-                    alt=""
+                    alt="profile_img"
                     className="follower_img"
                   />
                   <div className="follwer_storage">
@@ -69,7 +69,7 @@ class Aside extends React.Component {
                 <li>
                   <img
                     src="/images/wonkeunchoi/profile.jpeg"
-                    alt=""
+                    alt="profile_img"
                     className="follower_img"
                   />
                   <div className="follwer_storage">

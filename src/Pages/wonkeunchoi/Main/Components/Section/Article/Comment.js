@@ -1,5 +1,4 @@
 import React from 'react';
-// import Article from './Article';
 
 class Comment extends React.Component {
   constructor(props) {
@@ -16,7 +15,5 @@ class Comment extends React.Component {
     );
   }
 }
-// {this.state.comments.map(el => (
-//   <li>wonkeun_e: {el.text}</li>
-// ))}
+
 export default Comment;

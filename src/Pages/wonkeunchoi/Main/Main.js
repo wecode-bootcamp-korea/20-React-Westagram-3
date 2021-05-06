@@ -6,9 +6,6 @@ import './Components/Nav/Nav.scss';
 
 import './Styles/btn_font.scss';
 import './Styles/common.scss';
-//import PropTypes from 'prop-types';
-
-//import { Link } from 'react-router-dom';
 
 class Main extends React.Component {
   constructor() {
@@ -19,9 +16,10 @@ class Main extends React.Component {
   }
 
   render() {
+    const { color } = this.state;
     return (
       <main className="Main_wonkeunchoi">
-        <Nav titleColor={this.state.color} />
+        <Nav titleColor={color} />
         <div className="top_emtied_box" />
 
         <Section />

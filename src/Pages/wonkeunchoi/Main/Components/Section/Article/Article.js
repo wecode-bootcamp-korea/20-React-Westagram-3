@@ -5,7 +5,7 @@ class Article extends React.Component {
   constructor() {
     super();
     this.state = {
-      newReple: '', // concat 사용.
+      newReple: '',
       comments: [{ text: '' }],
     };
   }
@@ -18,8 +18,6 @@ class Article extends React.Component {
     arr = arr.concat({ text: this.state.newReple });
 
     this.setState({ newReple: '', comments: arr });
-
-    console.log('클릭');
   };
 
   render() {
@@ -93,8 +91,6 @@ class Article extends React.Component {
                 id="messageInputBox"
                 onChange={this.textChange}
               />
-
-              {/* //! 화면에 뿌려주기. */}
 
               <span>
                 <button

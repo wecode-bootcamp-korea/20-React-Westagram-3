@@ -1,6 +1,5 @@
 * {
   margin: 0;
-  box-sizing: border-box;
 }
 
 .Main_wonkeunchoi {
@@ -85,7 +84,6 @@
 
   .post_box {
     display: inline;
-
     width: 100%;
   }
 
@@ -104,8 +102,6 @@
   .comment_storage li {
     margin-left: 20px;
   }
-
-  /* /----------------------------------- */
 
   .right_layout #side_profile {
     width: 55px;
@@ -162,6 +158,7 @@
     width: 100%;
     margin-top: 20px;
   }
+
   .follower_user_box ul {
     padding: 0px;
   }
@@ -175,6 +172,7 @@
     display: inline;
     width: 79%;
   }
+
   .follower_user_box .follwer_storage span {
     display: block;
     margin-left: 12px;

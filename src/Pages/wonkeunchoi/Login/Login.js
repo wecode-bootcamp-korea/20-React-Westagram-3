@@ -1,65 +1,50 @@
 import React from 'react';
 import './Login.scss';
-//import { Link } from 'react-router-dom';
 
 class LoginWonkeunchoi extends React.Component {
   constructor() {
     super();
     this.state = {
-      id: '', //앞으로 바뀔 state에 글자가 추가되기 때문입니다.
-      pw: '', // 초기 상태는 아무것도 쓰지 않은 공백이 맞겠죠?
+      id: '',
+      pw: '',
     };
-    // goToMain = () => {
-    //   this.props.history.push('/main-wonkeunchoi');
   }
 
-  // handleClick = e => {
-  //   this.setState({ [e.target.name]: e.target.value }, () => {
-  //     console.log(e.target);
-  //     console.log(e.target.name);
-  //     console.log(e.target.value);
-  //   });
-  // };
+  goToMain = e => {
+    e.preventDefault();
+    fetch('http://10.58.6.252:8000/users/signin', {
+      method: 'POST',
+      body: JSON.stringify({
+        email: this.state.id,
+        password: this.state.pw,
+      }),
+    })
+      .then(response => response.json())
+      .then(result => {
+        if (result.MESSAGE === 'SUCCESS') {
+          localStorage.setItem('accessToken', result.ACCESS_TOKEN);
+          this.props.history.push('/main-wonkeunchoi');
+        } else if (result.MESSAGE === 'INVALID_USER') {
+          alert('회원가입을 해주세요.');
+        }
+      });
+  };
 
   handleIdClick = e => {
-    this.setState(
-      {
-        id: e.target.value,
-      },
-      () => {
-        console.log(e.target.value);
-        console.log(this.state.id);
-      }
-    );
+    this.setState({
+      id: e.target.value,
+    });
   };
 
   handlePwClick = e => {
-    this.setState(
-      {
-        pw: e.target.value,
-      },
-      () => {
-        console.log(e.target.value);
-      }
-    );
+    this.setState({
+      pw: e.target.value,
+    });
   };
-
-  // buttonChange = e => {
-  //   // const { loginStatus } = this.state;
-  //   const { id, pw } = this.state;
-  //   const isPass = id.includes('@') && pw >= 5;
-
-  //   if (!isPass) {
-  //     this.setState({ loginStatus: true });
-  //   } else {
-  //     this.setState({ loginStatus: false });
-  //   }
-  // };
 
   render() {
     const { id, pw } = this.state;
 
-    // const isPassword = pw;
     return (
       <main className="Login_wonkeunchoi">
         <button onClick={this.goToMain}>메인으로 이동하기 HOC</button>
@@ -100,7 +85,6 @@ class LoginWonkeunchoi extends React.Component {
                 </button>
               </form>
             </section>
-            {/* <Link to="#">비밀번호를 잊으셨나요?</Link> */}
           </div>
         </article>
       </main>
@@ -108,7 +92,3 @@ class LoginWonkeunchoi extends React.Component {
   }
 }
 export default LoginWonkeunchoi;
-// export default withRouter(Login
-
-// withRouter은 함수, input으로 컴포넌트를 받고
-// output으로 인자로 받은 컴포넌트에 페이지 이동 기능을 추가한 컴포넌트를 반환한다.
