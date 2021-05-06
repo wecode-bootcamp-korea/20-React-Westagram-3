@@ -12,7 +12,7 @@ class Feeds extends React.Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:3000/data/sunkyungnoh/feedData.json', {
+    fetch('/data/sunkyungnoh/feedData.json', {
       method: 'GET',
     })
       .then(res => res.json())

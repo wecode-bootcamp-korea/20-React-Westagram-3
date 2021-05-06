@@ -10,7 +10,7 @@ class Footer extends React.Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:3000/data/sunkyungnoh/footerData.json', {
+    fetch('/data/sunkyungnoh/footerData.json', {
       method: 'GET',
     })
       .then(res => res.json())
