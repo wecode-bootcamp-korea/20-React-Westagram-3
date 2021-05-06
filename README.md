@@ -1,3 +1,4 @@
+
 # westagram!
 
 React로 만든 인스타그램 클론 코딩 프로젝트
@@ -7,8 +8,12 @@ React로 만든 인스타그램 클론 코딩 프로젝트
 **로그인이미지**
 ![](https://images.velog.io/images/celline1637/post/6bebc893-e9d5-456d-bc36-43b2fb234062/%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5.gif)
 
+
 **메인페이지**
-주제: React를 사용한 Instagram clone
+
+![main](https://user-images.githubusercontent.com/71717303/117289025-19c45200-aea7-11eb-9bdf-687ae313d6b2.gif)
+
+## 주제: React를 사용한 Instagram clone
 
 - git을 사용한 첫 번째 협업 : CRA를 사용한 초기 세팅, branch 생성 후 버전 관리
 - 5명의 팀원들이 공동 component, scss 사용 및 관리
