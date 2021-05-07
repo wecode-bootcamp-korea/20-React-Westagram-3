@@ -8,7 +8,6 @@ class Comments extends React.Component {
     this.state = {
       commentArr: [],
       newComment: '',
-      value: '',
     };
   }
 
@@ -29,7 +28,7 @@ class Comments extends React.Component {
           isLiked: false,
         },
       ],
-      value: '',
+      newComment: '',
     });
   };
 
@@ -51,9 +50,8 @@ class Comments extends React.Component {
           <input
             onChange={e => {
               this.setState({ newComment: e.target.value });
-              this.setState({ value: e.target.value });
             }}
-            value={value}
+            value={newComment}
             className="commentInput"
             name="commentInput"
             method="post"
