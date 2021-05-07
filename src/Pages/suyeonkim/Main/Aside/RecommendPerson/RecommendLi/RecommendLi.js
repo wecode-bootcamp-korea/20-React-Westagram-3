@@ -1,10 +1,10 @@
 import React from 'react';
 
-class RecoLi extends React.Component {
+class RecommendLi extends React.Component {
   render() {
-    const { Infos } = this.props;
+    const { infos } = this.props;
 
-    const list = Infos.map(el => {
+    const list = infos.map(el => {
       return (
         <li className="recommend__person" key={el.id}>
           <div className="recommend__person__info">
@@ -23,4 +23,4 @@ class RecoLi extends React.Component {
   }
 }
 
-export default RecoLi;
+export default RecommendLi;

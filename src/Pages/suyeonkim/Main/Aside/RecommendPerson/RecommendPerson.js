@@ -1,10 +1,10 @@
 import React from 'react';
-import RecoLi from './RecoLi/RecoLi';
-import './RecoPerson.scss';
+import RecommendLi from './RecommendLi/RecommendLi';
+import './RecommendPerson.scss';
 
-class RecoPerson extends React.Component {
+class RecommendPerson extends React.Component {
   render() {
-    const { RecoPeople } = this.props;
+    const { recommendPeople } = this.props;
 
     return (
       <section className="recommend__people">
@@ -13,11 +13,11 @@ class RecoPerson extends React.Component {
           <div className="recommend__people__show">모두 보기</div>
         </div>
         <ul className="recommend__people__person__list">
-          <RecoLi Infos={RecoPeople} />
+          <RecommendLi infos={recommendPeople} />
         </ul>
       </section>
     );
   }
 }
 
-export default RecoPerson;
+export default RecommendPerson;

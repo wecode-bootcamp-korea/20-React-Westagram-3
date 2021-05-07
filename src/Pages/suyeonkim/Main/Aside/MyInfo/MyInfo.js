@@ -3,18 +3,18 @@ import './MyInfo.scss';
 
 class MyInformation extends React.Component {
   render() {
-    const { MyInfo } = this.props;
+    const { myInfo } = this.props;
 
     return (
       <section className="aside__myInfo">
         <img
           alt="my__profile"
-          src={MyInfo.image}
+          src={myInfo.image}
           className="aside__my-avator"
         />
         <div className="aside__myNames">
-          <div className="aside__myNickname">{MyInfo.nickName}</div>
-          <div className="aside__myRealname">{MyInfo.realName}</div>
+          <div className="aside__myNickname">{myInfo.nickName}</div>
+          <div className="aside__myRealname">{myInfo.realName}</div>
         </div>
       </section>
     );

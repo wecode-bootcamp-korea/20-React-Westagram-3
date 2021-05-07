@@ -34,11 +34,7 @@ class LoginForm extends React.Component {
     const changeValue = id.includes('@') && pw.length > 5;
 
     return (
-      <form
-        className="loginForm"
-        onSubmit={setValueInState}
-        onSubmit={this.goToMain}
-      >
+      <form className="loginForm" onSubmit={this.goToMain}>
         <input
           type="text"
           placeholder="전화번호, 사용자 이름 또는 이메일"

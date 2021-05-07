@@ -1,10 +1,10 @@
 import React from 'react';
-import PeopleLi from './PeopleLi/PeopleLi';
+import PeopleList from './PeopleLi/PeopleList';
 import './PeopleStory.scss';
 
 class PeopleStory extends React.Component {
   render() {
-    const { StoryInfo } = this.props;
+    const { storyInfo } = this.props;
 
     return (
       <section className="people__story">
@@ -13,7 +13,7 @@ class PeopleStory extends React.Component {
           <div className="people__story__show">모두 보기</div>
         </div>
         <ul className="people__story__person__list">
-          <PeopleLi Infos={StoryInfo} />
+          <PeopleList infos={storyInfo} />
         </ul>
       </section>
     );

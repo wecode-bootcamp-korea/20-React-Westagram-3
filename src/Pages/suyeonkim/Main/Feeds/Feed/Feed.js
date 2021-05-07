@@ -34,15 +34,17 @@ class Feed extends React.Component {
       el => feedInfo.feedId === el.feedId
     );
 
-    const list = [...this.state.feedComment];
     this.setState({
-      feedComment: list.concat({
-        id: matchId.length + 1,
-        userName: 'suyeonKim',
-        content: this.state.inputComment,
-        isLiked: false,
-        feedId: feedInfo.feedId,
-      }),
+      feedComment: [
+        ...this.state.feedComment,
+        {
+          id: matchId.length + 1,
+          userName: 'suyeonKim',
+          content: this.state.inputComment,
+          isLiked: false,
+          feedId: feedInfo.feedId,
+        },
+      ],
       inputComment: '',
     });
   };
@@ -57,7 +59,9 @@ class Feed extends React.Component {
     const { feedInfo } = this.props;
     const { feedComment } = this.state;
 
-    const list = feedComment.filter(el => el.feedId === feedInfo.feedId);
+    const list = feedComment.filter(
+      comment => comment.feedId === feedInfo.feedId
+    );
 
     return (
       <li className="feeds">

@@ -12,24 +12,25 @@ class Feeds extends React.Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:3000/data/suyeonkim/feed.json', {
-      method: 'GET',
-    })
+    fetch('/data/suyeonkim/feed.json')
       .then(res => res.json())
-      .then(feedInfo => {
+      .then(feeds => {
         this.setState({
-          feeds: feedInfo,
+          feeds,
         });
       });
   }
+
   render() {
     const { feeds } = this.state;
 
-    const list = feeds.map(feedData => (
-      <Feed feedInfo={feedData} key={feedData.feedId} />
-    ));
-
-    return <ul className="feeds-page">{list}</ul>;
+    return (
+      <ul className="feeds-page">
+        {feeds.map(feedData => (
+          <Feed feedInfo={feedData} key={feedData.feedId} />
+        ))}
+      </ul>
+    );
   }
 }
 

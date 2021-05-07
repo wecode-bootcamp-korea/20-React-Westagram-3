@@ -1,10 +1,10 @@
 import React from 'react';
 
-class PeopleLi extends React.Component {
+class PeopleList extends React.Component {
   render() {
-    const { Infos } = this.props;
+    const { infos } = this.props;
 
-    const list = Infos.map(el => {
+    const list = infos.map(el => {
       return (
         <li className="people__story__person" key={el.id}>
           <img alt="person__profile" src={el.image} />
@@ -20,4 +20,4 @@ class PeopleLi extends React.Component {
   }
 }
 
-export default PeopleLi;
+export default PeopleList;
