@@ -30,7 +30,7 @@ class LoginForm extends React.Component {
       .then(response => response.json())
       .then(result => {
         console.log(result);
-        if (result.message === 'success') {
+        if (result.message.toLowerCase() === 'success') {
           localStorage.setItem('token', result.token);
           this.props.history.push('/Main-sunkyungnoh');
         } else {
@@ -48,7 +48,6 @@ class LoginForm extends React.Component {
         onSubmit={this.submit}
         onChange={this.handleInput}
         className="loginForm"
-        // action="/Main-sunkyungnoh"
       >
         <div className="enter">
           <label
