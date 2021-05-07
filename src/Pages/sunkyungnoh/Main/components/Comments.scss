@@ -26,6 +26,10 @@ ul {
   }
 }
 
+.liked {
+  background-color: red;
+}
+
 .comments > form {
   display: flex;
   justify-content: space-between;

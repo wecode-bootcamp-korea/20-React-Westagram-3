@@ -12,7 +12,7 @@ class Comment extends Component {
           <img
             alt="좋아요버튼"
             src="/images/sunkyungnoh/heart.png"
-            style={{ backgroundColor: isLiked ? 'red' : 'none' }}
+            className={isLiked ? 'liked' : ''}
           />
         </button>
       </li>
