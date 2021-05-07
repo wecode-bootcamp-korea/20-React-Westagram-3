@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './Appstore.scss';
 
 class Appstore extends React.Component {
@@ -25,4 +25,4 @@ class Appstore extends React.Component {
   }
 }
 
-export default withRouter(Appstore);
+export default Appstore;
