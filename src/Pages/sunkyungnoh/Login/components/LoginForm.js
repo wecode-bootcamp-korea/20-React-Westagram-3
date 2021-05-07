@@ -55,42 +55,34 @@ class LoginForm extends React.Component {
         className="loginForm"
       >
         <div className="enter">
-          <label
-            htmlFor="id"
-            className={`form-description ${username ? 'focused' : ''}`}
-          >
+          <label className={`form-description ${username ? 'focused' : ''}`}>
             전화번호, 사용자 이름 또는 이메일
+            <input
+              value={username}
+              className={`input pw ${username ? 'entered' : ''}`}
+              type="text"
+              aria-label="전화번호, 사용자 이름 또는 이메일"
+              name="username"
+              required
+            />
           </label>
-          <input
-            value={username}
-            className={`input pw ${username ? 'entered' : ''}`}
-            type="text"
-            aria-label="전화번호, 사용자 이름 또는 이메일"
-            name="username"
-            id="id"
-            required
-          />
         </div>
         <div className="enter">
-          <label
-            htmlFor="pw"
-            className={`form-description ${password ? 'focused' : ''}`}
-          >
+          <label className={`form-description ${password ? 'focused' : ''}`}>
             비밀번호
+            <input
+              value={password}
+              className={`input pw ${password ? 'entered' : ''}`}
+              name="password"
+              type="password"
+              aria-label="비밀번호"
+              required
+            />
           </label>
-          <input
-            value={password}
-            className={`input pw ${password ? 'entered' : ''}`}
-            id="pw"
-            name="password"
-            type="password"
-            aria-label="비밀번호"
-            required
-          />
         </div>
         <button
           className={`login btn ${isValid ? 'active' : ''}`}
-          disabled={isValid ? false : true}
+          disabled={!isValid}
         >
           로그인
         </button>
