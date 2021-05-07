@@ -12,15 +12,9 @@ class Feeds extends React.Component {
   }
 
   componentDidMount() {
-    fetch('/data/sunkyungnoh/feedData.json', {
-      method: 'GET',
-    })
+    fetch('/data/sunkyungnoh/feedData.json')
       .then(res => res.json())
-      .then(feedData => {
-        this.setState({
-          feeds: feedData,
-        });
-      });
+      .then(feeds => this.setState({ feeds }));
   }
 
   render() {

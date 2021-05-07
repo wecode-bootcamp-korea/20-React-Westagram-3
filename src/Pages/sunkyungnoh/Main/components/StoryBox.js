@@ -11,15 +11,9 @@ class StoryBox extends React.Component {
   }
 
   componentDidMount() {
-    fetch('/data/sunkyungnoh/storyData.json', {
-      method: 'GET',
-    })
+    fetch('/data/sunkyungnoh/storyData.json')
       .then(res => res.json())
-      .then(storyData => {
-        this.setState({
-          storyInfo: storyData,
-        });
-      });
+      .then(storyInfo => this.setState({ storyInfo }));
   }
 
   render() {

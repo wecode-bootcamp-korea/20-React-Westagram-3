@@ -10,15 +10,9 @@ class Footer extends React.Component {
   }
 
   componentDidMount() {
-    fetch('/data/sunkyungnoh/footerData.json', {
-      method: 'GET',
-    })
+    fetch('/data/sunkyungnoh/footerData.json')
       .then(res => res.json())
-      .then(footerData => {
-        this.setState({
-          footer: footerData,
-        });
-      });
+      .then(footer => this.setState({ footer }));
   }
 
   render() {
