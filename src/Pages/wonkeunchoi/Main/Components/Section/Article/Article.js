@@ -5,19 +5,20 @@ class Article extends React.Component {
   constructor() {
     super();
     this.state = {
-      newReple: '',
+      inputText: '',
       comments: [{ text: '' }],
     };
   }
-  textChange = e => {
-    this.setState({ newReple: e.target.value });
+
+  handleInput = e => {
+    this.setState({ inputText: e.target.value });
   };
 
-  buttonClick = () => {
+  submitComment = () => {
     let arr = this.state.comments;
-    arr = arr.concat({ text: this.state.newReple });
+    arr = arr.concat({ text: this.state.inputText });
 
-    this.setState({ newReple: '', comments: arr });
+    this.setState({ inputText: '', comments: arr });
   };
 
   render() {
@@ -89,15 +90,11 @@ class Article extends React.Component {
                 type="text"
                 placeholder="댓글 달기.."
                 id="messageInputBox"
-                onChange={this.textChange}
+                onChange={this.handleInput}
               />
 
               <span>
-                <button
-                  type="submit"
-                  id="comment_btn"
-                  onClick={this.buttonClick}
-                >
+                <button id="comment_btn" onClick={this.submitComment}>
                   게시
                 </button>
               </span>

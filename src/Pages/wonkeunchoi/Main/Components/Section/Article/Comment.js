@@ -9,7 +9,7 @@ class Comment extends React.Component {
     return (
       <>
         {this.props.commentList.map(el => (
-          <li>wonkeun_e : {el.text}</li>
+          <li>{el.text}</li>
         ))}
       </>
     );

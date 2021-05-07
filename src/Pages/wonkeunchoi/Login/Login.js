@@ -51,9 +51,8 @@ class LoginWonkeunchoi extends React.Component {
         <article>
           <div className="westagram">
             <h1>Westagram</h1>
-
             <section>
-              <form action="submit" id="loginForm" method="GET">
+              <form action="submit" className="loginForm">
                 <label htmlFor="userid"></label>
                 <input
                   type="text"
@@ -77,7 +76,7 @@ class LoginWonkeunchoi extends React.Component {
                 />
 
                 <button
-                  id="btn_login"
+                  className="btn_login"
                   onClick={this.goToMain}
                   disabled={id.includes('@') && pw.length >= 5 ? false : true}
                 >
