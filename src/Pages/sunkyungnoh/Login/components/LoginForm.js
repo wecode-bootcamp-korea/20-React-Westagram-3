@@ -20,24 +20,29 @@ class LoginForm extends React.Component {
 
   submit = e => {
     e.preventDefault();
-    fetch('http://10.58.6.172:8000/user/login', {
-      method: 'POST',
-      body: JSON.stringify({
-        email: this.state.username,
-        password: this.state.password,
-      }),
-    })
-      .then(response => response.json())
-      .then(result => {
-        console.log(result);
-        if (result.message.toLowerCase() === 'success') {
-          localStorage.setItem('token', result.token);
-          this.props.history.push('/Main-sunkyungnoh');
-        } else {
-          alert('비밀번호를 다시 확인해주세요');
-        }
-      });
+    this.props.history.push('/Main-sunkyungnoh');
   };
+
+  // submit = e => {
+  //   e.preventDefault();
+  //   fetch('http://10.58.6.172:8000/user/login', {
+  //     method: 'POST',
+  //     body: JSON.stringify({
+  //       email: this.state.username,
+  //       password: this.state.password,
+  //     }),
+  //   })
+  //     .then(response => response.json())
+  //     .then(result => {
+  //       console.log(result);
+  //       if (result.message.toLowerCase() === 'success') {
+  //         localStorage.setItem('token', result.token);
+  //         this.props.history.push('/Main-sunkyungnoh');
+  //       } else {
+  //         alert('비밀번호를 다시 확인해주세요');
+  //       }
+  //     });
+  // };
 
   render() {
     const { username, password } = this.state;
@@ -84,7 +89,6 @@ class LoginForm extends React.Component {
           />
         </div>
         <button
-          type="submit"
           className={`login btn ${isValid ? 'active' : ''}`}
           disabled={isValid ? false : true}
         >
