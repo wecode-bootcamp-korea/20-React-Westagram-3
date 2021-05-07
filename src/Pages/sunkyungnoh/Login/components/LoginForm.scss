@@ -67,35 +67,35 @@
 
   .loginOption {
     width: 268px;
-  }
 
-  .loginOption > p {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-    margin-bottom: 18px;
-    color: rgb(142, 142, 142);
-    font-size: 13px;
-  }
+    p {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+      margin-bottom: 18px;
+      color: rgb(142, 142, 142);
+      font-size: 13px;
 
-  .loginOption > p::before {
-    content: '';
-    flex-grow: 1;
-    background: rgb(219, 219, 219);
-    height: 1px;
-    font-size: 0px;
-    line-height: 0px;
-    margin-right: 18px;
-  }
+      &::before {
+        content: '';
+        flex-grow: 1;
+        background: rgb(219, 219, 219);
+        height: 1px;
+        font-size: 0px;
+        line-height: 0px;
+        margin-right: 18px;
+      }
 
-  .loginOption > p::after {
-    content: '';
-    flex-grow: 1;
-    height: 1px;
-    margin-left: 18px;
-    background: rgb(219, 219, 219);
-    font-size: 0px;
-    line-height: 0px;
+      &::after {
+        content: '';
+        flex-grow: 1;
+        height: 1px;
+        margin-left: 18px;
+        background: rgb(219, 219, 219);
+        font-size: 0px;
+        line-height: 0px;
+      }
+    }
   }
 
   .facebook {
@@ -107,17 +107,16 @@
     border: none;
     cursor: pointer;
     text-decoration: none;
-  }
 
-  .facebook > img {
-    width: 16px;
-    height: 16px;
-    margin-right: 8px;
-  }
-
-  .facebook > span {
-    color: rgb(56, 81, 133);
-    font-size: 14px;
-    font-weight: bold;
+    img {
+      width: 16px;
+      height: 16px;
+      margin-right: 8px;
+    }
+    span {
+      color: rgb(56, 81, 133);
+      font-size: 14px;
+      font-weight: bold;
+    }
   }
 }

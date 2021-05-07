@@ -36,23 +36,23 @@ ul {
   margin-top: 20px;
   border-top: 1px solid rgb(219, 219, 219);
 
-  > button {
+  button {
     width: 40px;
     height: 40px;
     display: flex;
     padding: 8px 16px 8px 0;
     align-items: center;
+
+    &:last-of-type {
+      padding: 8px 0px 8px 16px;
+      color: #b3dffc;
+    }
   }
 
-  > input {
+  input {
     width: 80%;
     border: none;
     outline: none;
-  }
-
-  > button:last-of-type {
-    padding: 8px 0px 8px 16px;
-    color: #b3dffc;
   }
 
   .active {
