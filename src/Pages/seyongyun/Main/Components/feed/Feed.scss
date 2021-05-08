@@ -1,0 +1,62 @@
+.feed {
+  width: 600px;
+  margin-left: 100px;
+
+  .articleArea {
+    margin-top: 20px;
+  }
+
+  .profileThumnail {
+    width: 35px;
+  }
+
+  .profileLine {
+    display: flex;
+    flex-flow: row;
+    font-size: 5px;
+  }
+
+  .feedImage {
+    width: 100%;
+  }
+
+  .interactionButtonArea {
+    position: relative;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+  } /*왜 flex를 안걸면 폭이 좁아지고 width도 안먹나??*/
+
+  .iconBookmark {
+    position: absolute;
+    right: 0;
+  }
+
+  .likesArea {
+    display: flex;
+    align-items: center;
+    margin: 5px;
+  }
+
+  .recentLikeProfile {
+    width: 20px;
+  }
+
+  .postTimePassed {
+    color: gray;
+    font-size: 5px;
+  }
+
+  .replyInput {
+    width: 70%;
+  } /*왜 옆으로 살짝 나오는지?*/
+
+  .replyButton {
+    color: rgb(79, 79, 255);
+    background-color: white;
+  }
+
+  .replyList {
+    list-style: none;
+  }
+}
