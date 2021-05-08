@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+}
+
+.Main_wonkeunchoi {
+  width: 100%;
+  background-color: #fafafa;
+
+  section {
+    display: flex;
+    margin: 0 auto;
+    top: 100px;
+    max-width: 990px;
+  }
+
+  section .left_layout {
+    width: 100%;
+    height: 1000px;
+    top: 100px;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    background-color: white;
+  }
+
+  section .right_layout {
+    position: sticky;
+    margin-left: 3%;
+    width: 500px;
+    top: 100px;
+    height: 100%;
+    background-color: #fafafa;
+  }
+
+  .top_emtied_box {
+    display: block;
+    width: 100%;
+    height: 100px;
+  }
+
+  .feed_title {
+    position: relative;
+    width: 100%;
+    height: 56px;
+    background-color: white;
+    border: 1px solid rgb(241, 238, 238);
+    border-radius: 3px;
+  }
+
+  .profile_small_img {
+    width: 35px;
+    height: 35px;
+    margin-left: 15px;
+    margin-top: 10px;
+    border: 1px solid darkgray;
+    border-radius: 18px;
+  }
+
+  .feed_image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .profile_box {
+    position: absolute;
+    width: 636px;
+    height: 650px;
+  }
+
+  .nickname {
+    position: absolute;
+    display: inline;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 3.5%;
+    margin-left: 2%;
+  }
+
+  .nickname #dot_image {
+    position: absolute;
+    width: 21px;
+    height: 16px;
+    margin-left: 64%;
+  }
+
+  .post_box {
+    display: inline;
+    width: 100%;
+  }
+
+  .post {
+    width: 90%;
+    height: 8%;
+    margin: 19px;
+  }
+
+  .comment_storage {
+    display: flex;
+    width: 90%;
+    height: 15%;
+  }
+
+  .comment_storage li {
+    margin-left: 20px;
+  }
+
+  .right_layout #side_profile {
+    width: 55px;
+    height: 55px;
+    border-radius: 30px;
+    border: 0.5px solid darkgrey;
+  }
+
+  .right_layout .follow_myInfo {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .right_layout .follow_myInfo p {
+    display: block;
+    margin: 5px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  #myName_box {
+    width: 65%;
+    margin-top: 8px;
+    margin-left: 12px;
+  }
+
+  #myName {
+    font-weight: inherit;
+    color: #8e8e8e;
+  }
+
+  .follow_myInfo span {
+    font-size: 14px;
+    font-weight: bold;
+    color: #0095f6;
+  }
+
+  .follow_box {
+    width: 96%;
+    height: 350px;
+    margin-top: 30px;
+  }
+
+  .right_layout {
+    .follow_box {
+      #user_recommend_font {
+        margin-right: 39%;
+        font-size: 17px;
+        color: #8e8e8e;
+        font-weight: inherit;
+      }
+    }
+  }
+
+  .follower_user_box {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .follower_user_box ul {
+    padding: 0px;
+  }
+
+  .follower_user_box li {
+    display: flex;
+    margin-bottom: 16px;
+  }
+
+  .follower_user_box .follwer_storage {
+    display: inline;
+    width: 79%;
+  }
+
+  .follower_user_box .follwer_storage span {
+    display: block;
+    margin-left: 12px;
+    margin-bottom: 3px;
+  }
+}

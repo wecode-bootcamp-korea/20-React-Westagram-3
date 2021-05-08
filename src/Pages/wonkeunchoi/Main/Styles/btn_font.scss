@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+button {
+  margin-top: 14px;
+  margin-left: 3px;
+  padding: 0px;
+  background-color: white;
+  border: none solid white;
+}
+
+.type_comment {
+  display: flex;
+  width: 96%;
+  height: 52px;
+}
+
+.type_comment input {
+  width: 95%;
+  height: 100%;
+}
+
+.type_comment span button {
+  margin-left: 30px;
+  width: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #6495ed;
+}
+
+.follower_img {
+  width: 33px;
+  height: 32px;
+  border-radius: 30px;
+}
+
+.follower_user_box .followr_nickname {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.follower_user_box .follower_info {
+  font-size: 14px;
+  color: #8e8e8e;
+}
+
+.follower_user_box button span {
+  margin-bottom: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #0095f6;
+}
+
+.follower_user_box button {
+  margin: 0px;
+  background-color: #fafafa;
+}
