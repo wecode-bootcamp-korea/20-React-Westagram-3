@@ -1,0 +1,29 @@
+.loginSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 400px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(219, 219, 219);
+  border-radius: 1px;
+
+  h1 {
+    height: 50px;
+    margin: 22px auto 12px auto;
+    font-family: 'Satisfy', cursive;
+    font-size: 42px;
+    text-align: center;
+  }
+
+  .forgotPW {
+    height: 14px;
+    margin-top: 12px;
+    margin: 10px 0px;
+    color: rgb(56, 81, 133);
+    font-size: 12px;
+  }
+}

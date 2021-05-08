@@ -1,0 +1,17 @@
+.story {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 16px 10px;
+  width: 66px;
+
+  &:nth-child(1) {
+    margin-left: 5px;
+  }
+
+  p {
+    font-size: 13px;
+    margin-top: 4px;
+    text-align: center;
+  }
+}

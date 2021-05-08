@@ -1,0 +1,65 @@
+ul {
+  padding: 16px 16px 0;
+  font-size: 14px;
+  margin: 0;
+
+  li {
+    display: flex;
+    margin-bottom: 6px;
+    list-style: none;
+    list-style-position: inside;
+
+    span {
+      margin-right: 4px;
+      width: 14%;
+    }
+    div {
+      width: 82%;
+    }
+    button {
+      width: 4%;
+    }
+    img {
+      width: 14px;
+      justify-self: flex-end;
+    }
+  }
+}
+
+.liked {
+  background-color: red;
+}
+
+.comments > form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 56px;
+  padding: 0 16px;
+  margin-top: 20px;
+  border-top: 1px solid rgb(219, 219, 219);
+
+  button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    padding: 8px 16px 8px 0;
+    align-items: center;
+
+    &:last-of-type {
+      padding: 8px 0px 8px 16px;
+      color: #b3dffc;
+    }
+  }
+
+  input {
+    width: 80%;
+    border: none;
+    outline: none;
+  }
+
+  .active {
+    color: rgb(0, 149, 246) !important;
+  }
+}

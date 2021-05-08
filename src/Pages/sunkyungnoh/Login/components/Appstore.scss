@@ -1,0 +1,25 @@
+.appStore {
+  width: 350px;
+
+  p {
+    font-size: 14px;
+    line-height: 18px;
+    margin: 10px 20px 10px 20px;
+    text-align: center;
+  }
+
+  .appStoreBtn {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 10px 0;
+  }
+
+  img {
+    width: auto;
+    height: 40px;
+
+    &:first-of-type {
+      margin-right: 8px;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.recommendation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  padding: 8px 0px 8px;
+  font-size: 14px;
+
+  img {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 1px solid rgb(219, 219, 219);
+    background-color: rgb(255, 255, 255);
+  }
+
+  button {
+    margin-left: 16px;
+    padding: 0;
+    color: rgb(0, 149, 246);
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  .userInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 190px;
+
+    p:first-of-type {
+      font-weight: bold;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .userMessage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 180px;
+    font-size: 13px;
+    color: rgb(142, 142, 142);
+    font-weight: 400;
+  }
+}
