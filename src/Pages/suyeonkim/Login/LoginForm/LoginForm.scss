@@ -1,0 +1,46 @@
+@import '../../../../Styles/common.scss';
+
+.loginForm {
+  @include flexBox(center, center, column);
+  margin-top: 40px;
+
+  input {
+    width: 275px;
+    height: 40px;
+    padding-left: 10px;
+    border: 1px solid $--border-line;
+    font-size: 15px;
+    background-color: $--light-gray;
+
+    &::placeholder {
+      color: $--dark-gray;
+    }
+  }
+
+  input:last-of-type {
+    margin-top: 5px;
+  }
+
+  button {
+    @include flexBox(center, center, row);
+    width: 275px;
+    margin-top: 15px;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 20px;
+    color: white;
+    background-color: $--button-blue;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:active {
+      opacity: 0.6;
+    }
+
+    &:disabled {
+      opacity: 0.3;
+      cursor: inherit;
+    }
+  }
+}

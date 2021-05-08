@@ -1,0 +1,18 @@
+@import '../../../../../../Styles/common.scss';
+
+.feed__btn {
+  @include flexBox(space-between, center, row);
+  margin-top: 10px;
+  padding: 0 20px;
+}
+
+.feed__btn__interact {
+  @include flexBox(center, center, row);
+}
+
+button > img,
+.feed__btn__marker > img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}

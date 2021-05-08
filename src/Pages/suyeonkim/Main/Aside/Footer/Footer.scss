@@ -1,0 +1,30 @@
+@import '../../../../../Styles/common.scss';
+
+.footer {
+  @include flexBox(center, flex-start, column);
+  margin-top: 20px;
+}
+
+.footer__links {
+  @include flexBox(flex-start, flex-start, row);
+  flex-wrap: wrap;
+}
+
+.footer__link {
+  margin-top: 5px;
+  color: $--dark-gray;
+}
+
+.footer__link::after {
+  content: '\00B7';
+  margin-right: 3px;
+}
+
+.footer__link:last-child::after {
+  content: none;
+}
+
+.footer__date {
+  margin-top: 30px;
+  color: $--dark-gray;
+}

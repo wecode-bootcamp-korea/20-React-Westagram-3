@@ -1,0 +1,46 @@
+@import '../../../../Styles/common.scss';
+
+.aside__links {
+  position: sticky;
+  width: 300px;
+  top: 100px;
+  z-index: 0;
+
+  .people__story-top,
+  .recommend__people-top {
+    @include flexBox(space-between, center, row);
+    padding: 10px;
+  }
+
+  .people__story__title,
+  .recommend__people__title {
+    color: $--dark-gray;
+    font-weight: 600;
+  }
+
+  .people__story__show,
+  .recommend__people__show {
+    font-weight: 600;
+  }
+
+  .people__story__person,
+  .recommend__person__info {
+    @include flexBox(flex-start, center, row);
+    padding: 10px 20px;
+  }
+
+  .people__story__person img,
+  .recommend__person__info img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border: 1px solid plum;
+    border-radius: 50%;
+  }
+
+  .person__online,
+  .recommend__person__state {
+    margin-top: 3px;
+    color: $--dark-gray;
+  }
+}

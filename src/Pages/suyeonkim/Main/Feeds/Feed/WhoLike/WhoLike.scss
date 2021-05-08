@@ -1,0 +1,17 @@
+@import '../../../../../../Styles/common.scss';
+
+.feed__whoLike {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  padding: 0 20px;
+  font-size: 13px;
+
+  img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    border: 1px solid $--dark-gray;
+    border-radius: 50%;
+  }
+}

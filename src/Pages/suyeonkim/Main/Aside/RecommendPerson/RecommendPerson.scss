@@ -1,0 +1,19 @@
+@import '../../../../../Styles/common.scss';
+
+.recommend__people {
+  margin-top: 20px;
+  border: 1px solid $--border-line;
+  border-radius: 8px;
+}
+
+.recommend__person {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.recommend__person__followBtn {
+  margin-right: 15px;
+  color: $--light-blue;
+  cursor: pointer;
+}

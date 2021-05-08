@@ -1,0 +1,43 @@
+@import '../../../../../../Styles/common.scss';
+
+.feed__comments__list {
+  @include flexBox(space-between, center, row);
+  position: relative;
+  margin-top: 8px;
+
+  &:hover .feed__comments__delBtn {
+    display: inline-block;
+  }
+
+  img {
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+
+.feed__comments__contents {
+  width: 400px;
+}
+
+.feed__comments__goodBtn {
+  img {
+    width: 20px;
+    height: 20px;
+    color: $--heart-color;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+}
+
+.feed__comments__delBtn {
+  position: absolute;
+  right: 30px;
+  display: none;
+
+  img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+}
