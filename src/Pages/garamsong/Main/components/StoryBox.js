@@ -10,15 +10,9 @@ class StoryBox extends React.Component {
     };
   }
   componentDidMount() {
-    fetch('http://localhost:3000/data/garamsong/storyData.json', {
-      method: 'GET',
-    })
+    fetch('/data/garamsong/storyData.json')
       .then(res => res.json())
-      .then(story => {
-        this.setState({
-          stories: story,
-        });
-      });
+      .then(stories => this.setState({ stories }));
   }
   render() {
     const { stories } = this.state;
@@ -26,7 +20,7 @@ class StoryBox extends React.Component {
       <ul className="storyBoxGaramsong">
         {stories.map(story => {
           return (
-            <li className="eachStory">
+            <li key={story.id} className="eachStory">
               <div className="storyImgBox">
                 <img
                   alt="profile"

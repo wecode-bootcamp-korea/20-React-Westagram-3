@@ -4,10 +4,11 @@ import AddComments from './AddComments';
 
 class Feed extends React.Component {
   render() {
-    const { commentList, addComment, getComment } = this.props;
+    const { commentList, addComment, getComment, title } = this.props;
     return (
       <article className="feed">
         <header className="feedInfo">
+          <div>{title}</div>
           <div className="feedProfilePhoto">
             <img
               alt="profile"
@@ -56,6 +57,7 @@ class Feed extends React.Component {
             {commentList.map(el => {
               return (
                 <Comment
+                  key={el.id}
                   id={el.id}
                   userId={el.userId}
                   content={el.content}

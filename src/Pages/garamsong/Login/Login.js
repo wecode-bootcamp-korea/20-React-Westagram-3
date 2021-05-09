@@ -11,6 +11,33 @@ class Login extends React.Component {
     };
   }
 
+  goToMain = e => {
+    e.preventDefault();
+    //회원가입
+    const API = 'http://10.58.1.21:8000/users/signin';
+    fetch(API, {
+      method: 'POST',
+      body: JSON.stringify({
+        email: this.state.id,
+        password: this.state.pw,
+      }),
+    })
+      .then(res => {
+        if (res.status === 200) {
+          return res.json();
+        }
+      })
+      .then(res => {
+        if (res) {
+          // save localstroage
+          localStorage.setItem('TOKEN', res['ACCESS TOKEN']);
+          // push to main
+          this.props.history.push('/Main-garamsong');
+        } else {
+          alert('로그인하세요');
+        }
+      });
+  };
   handleInput = e => {
     const { name, value } = e.target;
     this.setState({
@@ -27,7 +54,11 @@ class Login extends React.Component {
           <div className="loginLogoContainer">
             <h1 className="loginLogo">Westagram</h1>
           </div>
-          <form className="loginInputContainer" action="/Main-garamsong">
+          <form
+            className="loginInputContainer"
+            action="/Main-garamsong"
+            onSubmit={this.goToMain}
+          >
             <input
               aria-label="type ID here"
               className="loginValue loginInputValue loginId"
@@ -52,7 +83,7 @@ class Login extends React.Component {
             </button>
           </form>
           <p className="forgotPasswordText">
-            <a href="#">비밀번호를 잊으셨나요?</a>
+            <button>비밀번호를 잊으셨나요?</button>
           </p>
         </section>
       </div>

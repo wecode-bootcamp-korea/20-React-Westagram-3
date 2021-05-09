@@ -1,15 +1,16 @@
 import React from 'react';
 
 class AddComments extends React.Component {
-  constructor() {
-    super();
+  // constructor() {
+  //   super();
 
-    this.state = {
-      comment: '',
-    };
-  }
+  //   this.state = {
+  //     comment: '',
+  //   };
+  // }
 
   inputComment = e => {
+    e.preventDefault();
     const { getComment } = this.props;
     getComment(e.target.value);
   };

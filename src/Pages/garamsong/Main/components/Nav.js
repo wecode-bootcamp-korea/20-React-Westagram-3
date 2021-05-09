@@ -2,7 +2,34 @@ import React from 'react';
 import './Nav.scss';
 
 class Nav extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
+      searchValue: '',
+    };
+  }
+
+  // handleInput = e => {
+  //   const { name, value } = e.target;
+  //   this.setState({
+  //     [name]: value,
+  //   });
+  // };
+
+  preventDefault = e => {
+    e.preventDefault();
+  };
+
+  searchInNav = e => {
+    const { name, searchValue } = e.target;
+    this.setState({
+      [name]: searchValue,
+    });
+    console.log(searchValue);
+  };
   render() {
+    const { searchValue } = this.state;
     return (
       <nav className="navGaramsong">
         <div className="navContainer">
@@ -19,8 +46,15 @@ class Nav extends React.Component {
               />
             </a>
           </div>
-          <form className="searchContainer">
-            <input className="searchBar" type="text" placeholder="검색" />
+          <form className="searchContainer" onSubmit={this.preventDefault}>
+            <input
+              className="searchBar"
+              type="text"
+              placeholder="검색"
+              name="searhValue"
+              key={searchValue}
+              onChange={this.searchInNav}
+            />
           </form>
           <div className="iconContainer">
             <a className="navIcon" href="#">

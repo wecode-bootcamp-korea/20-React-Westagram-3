@@ -13,24 +13,23 @@ class FeedsBox extends React.Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:3000/data/garamsong/commentData.json', {
-      method: 'GET',
-    })
+    fetch('/data/garamsong/commentData.json')
       .then(res => res.json())
-      .then(comments => {
-        this.setState({
-          commentList: comments,
-        });
-      });
+      .then(commentList => this.setState({ commentList }));
   }
+
+  getComment = comment => {
+    this.setState({ newComment: comment });
+  };
 
   addComment = e => {
     e.preventDefault();
+    const { newComment } = this.state;
     this.setState({
       commentList: [
         ...this.state.commentList,
         {
-          id: 4,
+          id: newComment,
           userId: 'dadadada',
           content: this.state.newComment,
           isLiked: '♡',
@@ -39,24 +38,33 @@ class FeedsBox extends React.Component {
     });
   };
 
-  getComment = comment => {
-    this.setState({ newComment: comment });
-  };
-
   render() {
-    const { commentList } = this.state;
+    const feedData = [
+      {
+        title: 'trip',
+        img: '/././sad',
+      },
+      {
+        title: 'photo',
+      },
+      {
+        title: 'comment',
+      },
+    ];
+    const { commentList, comment } = this.state;
     return (
       <div className="feedsBoxGaramsong">
-        <Feed
-          commentList={commentList}
-          addComment={this.addComment}
-          getComment={this.getComment}
-        />
-        <Feed
-          commentList={commentList}
-          addComment={this.addComment}
-          getComment={this.getComment}
-        />
+        {feedData.map(item => {
+          return (
+            <Feed
+              key={item.title}
+              title={item.title}
+              commentList={commentList}
+              addComment={this.addComment}
+              getComment={this.getComment}
+            />
+          );
+        })}
       </div>
     );
   }
