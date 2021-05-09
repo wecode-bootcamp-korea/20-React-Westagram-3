@@ -1,0 +1,43 @@
+.rightBoxGaramsong {
+  width: 40%;
+  padding: 10px;
+
+  .profilePhoto {
+    width: 20%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .profileName {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 78%;
+    padding: 5px 10px;
+  }
+
+  .myProfileBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .recommendBox {
+    margin-top: 10px;
+
+    .recommendTitleBox {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 10px 0;
+    }
+
+    .otherUserBox {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}

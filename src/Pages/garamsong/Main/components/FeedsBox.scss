@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+* {
+  font-family: 'Noto Sans KR', sans-serif !important ;
+
+  .feedsBoxGaramsong {
+    .feed {
+      background-color: #fff;
+      border: 1px solid #dbdbdb;
+      border-radius: 3px;
+      margin: 30px auto;
+
+      .feedInfo {
+        display: flex;
+        justify-content: space-between;
+        height: 60px;
+        padding: 5px;
+
+        .feedProfilePhoto {
+          display: flex;
+          justify-content: flex-end;
+          width: 10%;
+          padding: 3px;
+        }
+
+        .feedInfoRight {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 95%;
+          padding: 5px;
+
+          .feedInfoText {
+            font-size: 0.7rem;
+            color: #222;
+
+            .feedUserName {
+              margin-bottom: 5px;
+              font-weight: bold;
+            }
+
+            .feedLocation {
+              font-weight: lighter;
+              font-size: 0.6rem;
+            }
+          }
+
+          .moreInfo {
+            img {
+              width: 30px;
+              height: 20px;
+            }
+          }
+        }
+      }
+
+      .feedPhoto {
+        width: 100%;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .replyContainer {
+        padding: 5px 15px;
+
+        .replyIcons {
+          display: flex;
+          justify-content: space-between;
+          padding: 5px;
+          font-size: 1.2rem;
+        }
+
+        .replyCountLike {
+          display: flex;
+          align-items: center;
+          font-size: 0.7rem;
+          height: 40px;
+
+          img {
+            height: 20px;
+            margin-right: 3px;
+          }
+        }
+
+        .feedDescription {
+          // display: flex;
+          margin: 3px auto;
+          font-size: 0.7rem;
+
+          h4 {
+            margin-right: 5px;
+            font-weight: bold;
+          }
+        }
+
+        .seeAllReply {
+          margin: 3px auto;
+          font-size: 0.7rem;
+        }
+        .reply {
+          margin: 0;
+          padding: 0;
+          line-height: 1em;
+
+          .comment {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            position: relative;
+            width: 100%;
+            margin-bottom: 3px;
+
+            .userId {
+              margin-right: 10px;
+              font-weight: bold;
+            }
+
+            .replyText {
+              margin: 0;
+              padding: 0;
+            }
+
+            .like {
+              position: absolute;
+              right: 10px;
+              background: none;
+              border: none;
+              font-size: 0.6rem;
+            }
+          }
+        }
+
+        .date {
+          color: rgba(50, 50, 50, 0.5);
+        }
+
+        .addComments {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin: 5px 0;
+          padding: 5px;
+          border-top: 1px solid #000;
+
+          .emoji {
+            font-size: 2rem;
+          }
+
+          .typeBar {
+            width: 80%;
+            height: 30px;
+            background-color: transparent;
+            border: none;
+            resize: none;
+
+            &:focus {
+              outline: none;
+            }
+          }
+
+          .post {
+            width: 15%;
+            background: transparent;
+          }
+        }
+      }
+    }
+  }
+}

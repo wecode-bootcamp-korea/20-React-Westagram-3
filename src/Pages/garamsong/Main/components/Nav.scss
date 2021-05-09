@@ -1,0 +1,62 @@
+.navGaramsong {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 55px;
+  background-color: #fff;
+  border-bottom: 1px solid rgba(150, 150, 150, 0.2);
+  font-size: 0.7rem;
+
+  .navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+
+    .logoContainer {
+      width: 13%;
+
+      .logoImg {
+        height: 30px;
+      }
+    }
+
+    .searchContainer {
+      .searchBar {
+        width: 215px;
+        height: 28px;
+        padding: 5px;
+        border: 1px solid #dbdbdb;
+        border-radius: 3px;
+        background-color: #fafafa;
+        color: #8e8e8e;
+        text-align: center;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+
+    .iconContainer {
+      display: flex;
+      justify-content: space-between;
+      width: 100px;
+      height: 50%;
+
+      .navIcon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30%;
+      }
+
+      .navIconImg {
+        width: 22px;
+        height: 22px;
+      }
+    }
+  }
+}
